@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Logo } from "@/components/Logo";
 import heroImage from "@/assets/hero-patagonia.jpg";
 import mendozaImage from "@/assets/mendoza-vineyards.jpg";
 import iguazuImage from "@/assets/iguazu-falls.jpg";
@@ -13,9 +14,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Header / Navigation */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-4 py-4">
+          <Logo />
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImage})`,
@@ -324,28 +332,36 @@ const Index = () => {
 
       {/* Footer CTA */}
       <section id="contact" className="py-32 md:py-40 gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-8 text-white">Next step</h2>
-          <p className="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
-            Complete the validation form. We'll respond within 48 business hours with next steps.
-          </p>
-          <Button 
-            size="lg"
-            className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-8 h-auto mb-16 shadow-medium"
-          >
-            Request Access to Opportunities <ArrowRight className="ml-2 h-6 w-6" />
-          </Button>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="mb-8 text-white">Next step</h2>
+            <p className="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
+              Complete the validation form. We'll respond within 48 business hours with next steps.
+            </p>
+            <Button 
+              size="lg"
+              className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-8 h-auto shadow-medium"
+            >
+              Request Access to Opportunities <ArrowRight className="ml-2 h-6 w-6" />
+            </Button>
+          </div>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-lg opacity-90">
-            <a href="mailto:contact@example.com" className="hover:underline transition-smooth">
-              Contact
-            </a>
-            <a href="#" className="hover:underline transition-smooth">
-              LinkedIn
-            </a>
-            <a href="#" className="hover:underline transition-smooth">
-              Terms & Privacy
-            </a>
+          <div className="border-t border-white/20 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <Logo variant="footer" className="[&_span]:text-white [&_svg]:text-white" />
+            <div className="flex flex-col sm:flex-row gap-6 items-center text-lg opacity-90">
+              <a href="mailto:contact@example.com" className="hover:underline transition-smooth">
+                Contact
+              </a>
+              <a href="#" className="hover:underline transition-smooth">
+                LinkedIn
+              </a>
+              <a href="#" className="hover:underline transition-smooth">
+                Terms & Privacy
+              </a>
+            </div>
+            <p className="text-sm opacity-75">
+              © 2025 Pampa Ventures
+            </p>
           </div>
         </div>
       </section>
