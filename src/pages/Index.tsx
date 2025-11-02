@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Logo } from "@/components/Logo";
 import heroImage from "@/assets/hero-patagonia.jpg";
 import mendozaImage from "@/assets/mendoza-vineyards.jpg";
@@ -7,6 +8,8 @@ import iguazuImage from "@/assets/iguazu-falls.jpg";
 import pampasImage from "@/assets/pampas-sunset.jpg";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -42,7 +45,7 @@ const Index = () => {
             size="lg"
             className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto animate-fade-in shadow-medium"
             style={{ animationDelay: "0.4s" }}
-            onClick={() => scrollToSection("contact")}
+            onClick={() => navigate("/form")}
           >
             Get Started <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -200,7 +203,7 @@ const Index = () => {
               <Button 
                 size="lg"
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-6 h-auto shadow-soft"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => navigate("/form")}
               >
                 Start Validation <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -341,6 +344,7 @@ const Index = () => {
             <Button 
               size="lg"
               className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-8 h-auto shadow-medium"
+              onClick={() => navigate("/form")}
             >
               Request Access to Opportunities <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
