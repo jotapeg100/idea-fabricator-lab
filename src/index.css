@@ -132,4 +132,24 @@ All colors MUST be HSL.
   .transition-smooth {
     transition: var(--transition-smooth);
   }
+  
+  .grid-overlay {
+    background-image: 
+      linear-gradient(0deg, transparent 1px, transparent 1px),
+      linear-gradient(90deg, transparent 1px, transparent 1px);
+    background-size: 2px 2px;
+    background-position: 0 0, 0 0;
+    background-repeat: repeat;
+  }
+  
+  .grid-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 2px 2px;
+    pointer-events: none;
+  }
 }

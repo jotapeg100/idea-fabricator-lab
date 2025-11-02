@@ -24,7 +24,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 grid-overlay"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImage})`,
             backgroundSize: "cover",
@@ -142,7 +142,7 @@ const Index = () => {
       {/* Image Section - Vineyards */}
       <section className="h-[60vh] relative">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 grid-overlay"
           style={{
             backgroundImage: `url(${mendozaImage})`,
             backgroundSize: "cover",
@@ -212,7 +212,7 @@ const Index = () => {
       {/* Image Section - Iguazu */}
       <section className="h-[60vh] relative">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 grid-overlay"
           style={{
             backgroundImage: `url(${iguazuImage})`,
             backgroundSize: "cover",
@@ -277,7 +277,7 @@ const Index = () => {
       {/* Image Section - Pampas */}
       <section className="h-[60vh] relative">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 grid-overlay"
           style={{
             backgroundImage: `url(${pampasImage})`,
             backgroundSize: "cover",
