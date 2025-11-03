@@ -45,7 +45,7 @@ const Index = () => {
             size="lg"
             className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto animate-fade-in shadow-medium"
             style={{ animationDelay: "0.4s" }}
-            onClick={() => navigate("/form")}
+            onClick={() => scrollToSection("how-we-work")}
           >
             Get Started <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
