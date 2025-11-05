@@ -296,14 +296,18 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-8 text-foreground">Background that matters</h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Consultancy founded by a professional with experience in:
+              Consultancy founded by a multi-disciplinary team with experience in:
             </p>
             
             <div className="grid sm:grid-cols-2 gap-8 mb-12">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">Computer engineering</span> (technical analysis)</p>
+                  <p className="text-xl"><span className="font-semibold">Real Estate</span> (certified)</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
+                  <p className="text-xl"><span className="font-semibold">Computer Engineering</span> (data analysis)</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
@@ -319,15 +323,19 @@ const Index = () => {
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
                   <p className="text-xl"><span className="font-semibold">Project execution</span> (real implementation)</p>
                 </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
+                  <p className="text-xl"><span className="font-semibold">Leadership</span> (team work and values)</p>
+                </div>
               </div>
             </div>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              This combination enables evaluating opportunities from multiple angles: technical viability, market potential, financial return, and execution feasibility.
+              Evaluation of opportunities from multiple angles: technical viability, market potential, financial return, and execution feasibility.
             </p>
             
             <p className="text-2xl font-semibold text-foreground">
-              We are not generalist intermediaries. We are specialists in value discovery and analysis.
+              We specialize in value discovery and analysis.
             </p>
           </div>
         </div>
