@@ -89,7 +89,7 @@ const AccessForm = () => {
           <CheckCircle2 className="w-20 h-20 mx-auto text-primary" />
           <h1 className="text-4xl font-bold">Request Received</h1>
           <div className="space-y-4 text-muted-foreground">
-            <p className="text-lg">Thank you for your interest in Trapial Ventures.</p>
+            <p className="text-lg">Thank you for your interest in Trapial Group.</p>
             <p>We have received your information and are reviewing it.</p>
             <div className="bg-muted/50 rounded-lg p-6 space-y-3 text-left">
               <h3 className="font-semibold text-foreground">Next steps:</h3>
@@ -514,7 +514,7 @@ const AccessForm = () => {
                 name="howHeard"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>How did you learn about Trapial Ventures? (Optional)</FormLabel>
+                    <FormLabel>How did you learn about Trapial Group? (Optional)</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
