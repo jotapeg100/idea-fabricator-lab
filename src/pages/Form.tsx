@@ -45,7 +45,7 @@ const AccessForm = () => {
               marginHeight={0} 
               marginWidth={0}
               className="w-full min-h-[2400px]"
-              title="Trapial Ventures - Access Request Form"
+              title="Trapial Group - Access Request Form"
               loading="lazy"
             >
               Loading form…
