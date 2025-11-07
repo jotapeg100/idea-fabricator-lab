@@ -54,7 +54,6 @@ type FormData = z.infer<typeof formSchema>;
 
 const AccessForm = () => {
   const navigate = useNavigate();
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -109,45 +108,10 @@ Additional Info: ${data.additionalInfo || "None"}`;
     // Open email client
     window.open(mailtoLink, '_blank');
     
-    toast.success("Opening your email client...");
-    
-    // Small delay before showing success screen
-    setTimeout(() => {
-      setIsSubmitted(true);
-    }, 1000);
+    // Show success message and clear form
+    toast.success("Your request has been submitted successfully");
+    form.reset();
   };
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center px-4">
-        <div className="max-w-2xl w-full text-center space-y-6">
-          <CheckCircle2 className="w-20 h-20 mx-auto text-primary" />
-          <h1 className="text-4xl font-bold">Request Received</h1>
-          <div className="space-y-4 text-muted-foreground">
-            <p className="text-lg">Thank you for your interest in Trapial Group.</p>
-            <p>We have received your information and are reviewing it.</p>
-            <div className="bg-muted/50 rounded-lg p-6 space-y-3 text-left">
-              <h3 className="font-semibold text-foreground">Next steps:</h3>
-              <ul className="space-y-2">
-                <li>→ We will review your profile within the next 48 business hours</li>
-                <li>→ You will receive an email with opportunities aligned with your criteria</li>
-                <li>→ We will coordinate an initial call to discuss specific projects</li>
-              </ul>
-            </div>
-            <p className="text-sm">
-              While you wait, you can explore our{" "}
-              <button onClick={() => navigate("/")} className="text-primary hover:underline">
-                project portfolio
-              </button>
-            </p>
-          </div>
-          <Button onClick={() => navigate("/")} size="lg">
-            Return to Home
-          </Button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-background">
