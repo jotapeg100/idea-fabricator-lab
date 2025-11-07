@@ -81,7 +81,41 @@ const AccessForm = () => {
   });
 
   const onSubmit = (data: FormData) => {
-    console.log("Form submitted:", data);
+    // Format email body with all form data
+    const emailBody = `
+ACCESS REQUEST TO OPPORTUNITIES - TRAPIAL GROUP
+
+=== BASIC INFORMATION ===
+Full Name: ${data.fullName}
+Email: ${data.email}
+Phone / WhatsApp: ${data.phone}
+Country of Residence: ${data.country}
+
+=== INVESTOR PROFILE ===
+Profile: ${data.investorProfile}
+Investment Range: ${data.investmentRange}
+
+=== AREAS OF INTEREST ===
+Opportunity Types: ${data.opportunityTypes.join(", ")}
+Regions: ${data.regions.length > 0 ? data.regions.join(", ") : "No specific preference"}
+Investment Horizon: ${data.investmentHorizon}
+Experience Level: ${data.experience}
+
+=== ADDITIONAL INFORMATION ===
+How did you hear about us: ${data.howHeard || "Not specified"}
+Additional Information: ${data.additionalInfo || "None"}
+
+=== CONFIRMATIONS ===
+Confirmed Investment Capacity: ${data.confirmCapacity ? "Yes" : "No"}
+Accepted Terms and Privacy Policy: ${data.acceptTerms ? "Yes" : "No"}
+    `.trim();
+
+    const subject = "Access Request - Trapial Group Opportunities";
+    const mailtoLink = `mailto:paul.gonzalez@trapialgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     toast.success("Request received! We'll respond within 48 hours.");
     setIsSubmitted(true);
   };
