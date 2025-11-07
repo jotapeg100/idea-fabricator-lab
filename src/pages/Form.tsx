@@ -81,43 +81,40 @@ const AccessForm = () => {
   });
 
   const onSubmit = (data: FormData) => {
+    console.log("Form submitted successfully:", data);
+    
     // Format email body with all form data
-    const emailBody = `
-ACCESS REQUEST TO OPPORTUNITIES - TRAPIAL GROUP
+    const emailBody = `ACCESS REQUEST - TRAPIAL GROUP
 
-=== BASIC INFORMATION ===
-Full Name: ${data.fullName}
+Name: ${data.fullName}
 Email: ${data.email}
-Phone / WhatsApp: ${data.phone}
-Country of Residence: ${data.country}
+Phone: ${data.phone}
+Country: ${data.country}
 
-=== INVESTOR PROFILE ===
 Profile: ${data.investorProfile}
 Investment Range: ${data.investmentRange}
-
-=== AREAS OF INTEREST ===
 Opportunity Types: ${data.opportunityTypes.join(", ")}
-Regions: ${data.regions.length > 0 ? data.regions.join(", ") : "No specific preference"}
+Regions: ${data.regions.length > 0 ? data.regions.join(", ") : "No preference"}
 Investment Horizon: ${data.investmentHorizon}
-Experience Level: ${data.experience}
+Experience: ${data.experience}
 
-=== ADDITIONAL INFORMATION ===
-How did you hear about us: ${data.howHeard || "Not specified"}
-Additional Information: ${data.additionalInfo || "None"}
+How Heard: ${data.howHeard || "N/A"}
+Additional Info: ${data.additionalInfo || "None"}`;
 
-=== CONFIRMATIONS ===
-Confirmed Investment Capacity: ${data.confirmCapacity ? "Yes" : "No"}
-Accepted Terms and Privacy Policy: ${data.acceptTerms ? "Yes" : "No"}
-    `.trim();
-
-    const subject = "Access Request - Trapial Group Opportunities";
+    const subject = "Access Request - Trapial Group";
     const mailtoLink = `mailto:paul.gonzalez@trapialgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
     
-    // Open email client
-    window.location.href = mailtoLink;
+    console.log("Opening mailto link...");
     
-    toast.success("Request received! We'll respond within 48 hours.");
-    setIsSubmitted(true);
+    // Open email client
+    window.open(mailtoLink, '_blank');
+    
+    toast.success("Opening your email client...");
+    
+    // Small delay before showing success screen
+    setTimeout(() => {
+      setIsSubmitted(true);
+    }, 1000);
   };
 
   if (isSubmitted) {
