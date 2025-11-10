@@ -372,7 +372,7 @@ const Index = () => {
               </a>
             </div>
             <p className="text-sm opacity-75">
-              © 2025 Pampa Ventures
+              © 2025 Trapial Group
             </p>
           </div>
         </div>
