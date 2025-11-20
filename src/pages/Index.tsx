@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroImage from "@/assets/hero-patagonia.jpg";
 import mendozaImage from "@/assets/mendoza-vineyards.jpg";
 import iguazuImage from "@/assets/iguazu-falls.jpg";
@@ -9,6 +11,7 @@ import pampasImage from "@/assets/pampas-sunset.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -19,8 +22,9 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Header / Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Logo />
+          <LanguageSwitcher />
         </div>
       </header>
 
@@ -36,10 +40,10 @@ const Index = () => {
         />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="mb-6 animate-fade-in">
-            Strategic investments in Argentina
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-3xl mx-auto font-light animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Discovery, analysis, and exclusive access to high-yield opportunities.
+            {t('hero.subtitle')}
           </p>
           <Button 
             size="lg"
@@ -47,7 +51,7 @@ const Index = () => {
             style={{ animationDelay: "0.4s" }}
             onClick={() => scrollToSection("how-we-work")}
           >
-            Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            {t('header.getStarted')} <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </section>
@@ -56,36 +60,36 @@ const Index = () => {
       <section id="why-argentina" className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="mb-8 text-foreground">Land of real opportunities</h2>
+            <h2 className="mb-8 text-foreground">{t('whyArgentina.title')}</h2>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
-              Argentina possesses exceptional fundamentals that are not reflected in current valuations:
+              {t('whyArgentina.intro')}
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">2nd largest global reserve of unconventional gas</p>
+                  <p className="text-lg">{t('whyArgentina.point1')}</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">4th largest global reserve of lithium</p>
+                  <p className="text-lg">{t('whyArgentina.point2')}</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">Agricultural land among the most productive on the planet</p>
+                  <p className="text-lg">{t('whyArgentina.point3')}</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">World-class human capital</p>
+                  <p className="text-lg">{t('whyArgentina.point4')}</p>
                 </div>
               </div>
             </div>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              The gap between intrinsic value and market price creates unique windows for informed investors.
+              {t('whyArgentina.conclusion')}
             </p>
           </div>
         </div>
@@ -95,16 +99,16 @@ const Index = () => {
       <section id="what-we-do" className="py-24 md:py-32 gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="mb-16 text-center text-foreground">Three competencies, one objective</h2>
+            <h2 className="mb-16 text-center text-foreground">{t('whatWeDo.title')}</h2>
             
             <div className="grid md:grid-cols-3 gap-12 mb-16">
               <div className="text-center space-y-4">
                 <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   <div className="w-3 h-3 rounded-full bg-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Discovery</h3>
+                <h3 className="text-2xl font-bold">{t('whatWeDo.discovery.title')}</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We identify assets, businesses, and opportunities that are beyond the reach of conventional search.
+                  {t('whatWeDo.discovery.description')}
                 </p>
               </div>
               
@@ -112,9 +116,9 @@ const Index = () => {
                 <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   <div className="w-3 h-3 rounded-full bg-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Analysis</h3>
+                <h3 className="text-2xl font-bold">{t('whatWeDo.analysis.title')}</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We develop complete business plans with verifiable projections and transparent assumptions.
+                  {t('whatWeDo.analysis.description')}
                 </p>
               </div>
               
@@ -122,9 +126,9 @@ const Index = () => {
                 <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   <div className="w-3 h-3 rounded-full bg-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Exclusive representation</h3>
+                <h3 className="text-2xl font-bold">{t('whatWeDo.representation.title')}</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We present each opportunity to a select group of validated investors, guaranteeing preferential access.
+                  {t('whatWeDo.representation.description')}
                 </p>
               </div>
             </div>
@@ -135,7 +139,7 @@ const Index = () => {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto shadow-soft"
                 onClick={() => scrollToSection("contact")}
               >
-                Explore Opportunities <ArrowRight className="ml-2 h-5 w-5" />
+                {t('whatWeDo.cta')} <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -159,43 +163,43 @@ const Index = () => {
       <section id="how-we-work" className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-8 text-foreground">Validation process</h2>
+            <h2 className="mb-8 text-foreground">{t('howWeWork.title')}</h2>
             <p className="text-2xl text-muted-foreground mb-12 leading-relaxed">
-              Why do we request information before sharing opportunities?
+              {t('howWeWork.question')}
             </p>
             <p className="text-xl text-foreground mb-12 leading-relaxed">
-              Because the information we handle is sensitive and the assets we represent are unique.
+              {t('howWeWork.answer')}
             </p>
             
             <div className="space-y-6 mb-16">
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Confirm seriousness and investment capacity</p>
+                <p className="text-xl">{t('howWeWork.point1')}</p>
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Align opportunities with your specific profile</p>
+                <p className="text-xl">{t('howWeWork.point2')}</p>
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Protect confidentiality of sellers</p>
+                <p className="text-xl">{t('howWeWork.point3')}</p>
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Optimize your time by presenting only what's relevant</p>
+                <p className="text-xl">{t('howWeWork.point4')}</p>
               </div>
             </div>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              This step creates no commitment. It's simply the protocol that enables access to a curated pipeline of opportunities.
+              {t('howWeWork.noCommitment')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 text-lg text-muted-foreground mb-12">
               <div className="flex-1">
-                <span className="font-semibold text-foreground">Time required:</span> 3 minutes
+                <span className="font-semibold text-foreground">{t('howWeWork.timeRequired')}</span> {t('howWeWork.timeValue')}
               </div>
               <div className="flex-1">
-                <span className="font-semibold text-foreground">Initial response:</span> 48 business hours
+                <span className="font-semibold text-foreground">{t('howWeWork.initialResponse')}</span> {t('howWeWork.responseValue')}
               </div>
             </div>
             
@@ -205,7 +209,7 @@ const Index = () => {
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-6 h-auto shadow-soft"
                 onClick={() => navigate("/form")}
               >
-                Start Validation <ArrowRight className="ml-2 h-5 w-5" />
+                {t('howWeWork.cta')} <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -229,36 +233,36 @@ const Index = () => {
       <section id="what-includes" className="py-24 md:py-32 gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-8 text-foreground">More than a teaser</h2>
+            <h2 className="mb-8 text-foreground">{t('whatIncludes.title')}</h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Each opportunity presented includes complete documentation:
+              {t('whatIncludes.intro')}
             </p>
             
             <div className="space-y-6 mb-12">
               <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
                 <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Detailed business plan</p>
+                <p className="text-xl">{t('whatIncludes.point1')}</p>
               </div>
               <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
                 <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Financial projections with explicit assumptions</p>
+                <p className="text-xl">{t('whatIncludes.point2')}</p>
               </div>
               <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
                 <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Risk analysis contextualized to the Argentine market</p>
+                <p className="text-xl">{t('whatIncludes.point3')}</p>
               </div>
               <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
                 <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Preliminary due diligence</p>
+                <p className="text-xl">{t('whatIncludes.point4')}</p>
               </div>
               <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
                 <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">Temporary exclusivity terms</p>
+                <p className="text-xl">{t('whatIncludes.point5')}</p>
               </div>
             </div>
             
             <p className="text-2xl font-semibold text-foreground text-center">
-              We don't share "ideas." We share structured investment cases.
+              {t('whatIncludes.conclusion')}
             </p>
           </div>
         </div>
@@ -268,10 +272,10 @@ const Index = () => {
       <section id="who-for" className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-8 text-foreground">Investor profile</h2>
-            <p className="text-xl text-muted-foreground mb-8">This service is for:</p>
+            <h2 className="mb-8 text-foreground">{t('whoFor.title')}</h2>
+            <p className="text-xl text-muted-foreground mb-8">{t('whoFor.subtitle')}</p>
             <p className="text-3xl md:text-4xl font-bold text-foreground leading-relaxed">
-              Family Offices and Individual Investors Seeking Direct Exposure to Argentine Assets
+              {t('whoFor.description')}
             </p>
           </div>
         </div>
@@ -294,48 +298,48 @@ const Index = () => {
       <section id="who-we-are" className="py-24 md:py-32 gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-8 text-foreground">Background that matters</h2>
+            <h2 className="mb-8 text-foreground">{t('whoWeAre.title')}</h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Consultancy founded by a multi-disciplinary team with experience in:
+              {t('whoWeAre.intro')}
             </p>
             
             <div className="grid sm:grid-cols-2 gap-8 mb-12">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">Real Estate</span> (certified)</p>
+                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.realEstate')}</span> {t('whoWeAre.realEstateDetail')}</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">Computer Engineering</span> (data analysis)</p>
+                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.engineering')}</span> {t('whoWeAre.engineeringDetail')}</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">Design</span> (product vision)</p>
+                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.design')}</span> {t('whoWeAre.designDetail')}</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">Finance</span> (modeling and projections)</p>
+                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.finance')}</span> {t('whoWeAre.financeDetail')}</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">Project execution</span> (real implementation)</p>
+                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.execution')}</span> {t('whoWeAre.executionDetail')}</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">Leadership</span> (team work and values)</p>
+                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.leadership')}</span> {t('whoWeAre.leadershipDetail')}</p>
                 </div>
               </div>
             </div>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Evaluation of opportunities from multiple angles: technical viability, market potential, financial return, and execution feasibility.
+              {t('whoWeAre.evaluation')}
             </p>
             
             <p className="text-2xl font-semibold text-foreground">
-              We specialize in value discovery and analysis.
+              {t('whoWeAre.conclusion')}
             </p>
           </div>
         </div>
@@ -345,16 +349,16 @@ const Index = () => {
       <section id="contact" className="py-32 md:py-40 gradient-hero text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="mb-8 text-white">Next step</h2>
+            <h2 className="mb-8 text-white">{t('footerCta.title')}</h2>
             <p className="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
-              Complete the validation form. We'll respond within 48 business hours with next steps.
+              {t('footerCta.description')}
             </p>
             <Button 
               size="lg"
               className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-8 h-auto shadow-medium"
               onClick={() => navigate("/form")}
             >
-              Request Access to Opportunities <ArrowRight className="ml-2 h-6 w-6" />
+              {t('footerCta.cta')} <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
           </div>
           
@@ -362,17 +366,17 @@ const Index = () => {
             <Logo variant="footer" className="[&_span]:text-white [&_svg]:text-white" />
             <div className="flex flex-col sm:flex-row gap-6 items-center text-lg opacity-90">
               <a href="mailto:contact@example.com" className="hover:underline transition-smooth">
-                Contact
+                {t('footerCta.contact')}
               </a>
               <a href="#" className="hover:underline transition-smooth">
-                LinkedIn
+                {t('footerCta.linkedin')}
               </a>
               <a href="#" className="hover:underline transition-smooth">
-                Terms & Privacy
+                {t('footerCta.termsPrivacy')}
               </a>
             </div>
             <p className="text-sm opacity-75">
-              © 2025 Trapial Group
+              {t('footerCta.copyright')}
             </p>
           </div>
         </div>

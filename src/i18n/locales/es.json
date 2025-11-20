@@ -1,0 +1,100 @@
+{
+  "header": {
+    "getStarted": "Comenzar"
+  },
+  "hero": {
+    "title": "Inversiones estratégicas en Argentina",
+    "subtitle": "Descubrimiento, análisis y acceso exclusivo a oportunidades de alto rendimiento."
+  },
+  "whyArgentina": {
+    "title": "Tierra de oportunidades reales",
+    "intro": "Argentina posee fundamentos excepcionales que no se reflejan en las valuaciones actuales:",
+    "point1": "2da reserva mundial de gas no convencional",
+    "point2": "4ta reserva mundial de litio",
+    "point3": "Tierra agrícola entre las más productivas del planeta",
+    "point4": "Capital humano de clase mundial",
+    "conclusion": "La brecha entre valor intrínseco y precio de mercado crea ventanas únicas para inversores informados."
+  },
+  "whatWeDo": {
+    "title": "Tres competencias, un objetivo",
+    "discovery": {
+      "title": "Descubrimiento",
+      "description": "Identificamos activos, negocios y oportunidades que están fuera del alcance de la búsqueda convencional."
+    },
+    "analysis": {
+      "title": "Análisis",
+      "description": "Desarrollamos planes de negocio completos con proyecciones verificables y supuestos transparentes."
+    },
+    "representation": {
+      "title": "Representación exclusiva",
+      "description": "Presentamos cada oportunidad a un grupo selecto de inversores validados, garantizando acceso preferencial."
+    },
+    "cta": "Explorar Oportunidades"
+  },
+  "howWeWork": {
+    "title": "Proceso de validación",
+    "question": "¿Por qué solicitamos información antes de compartir oportunidades?",
+    "answer": "Porque la información que manejamos es sensible y los activos que representamos son únicos.",
+    "point1": "Confirmar seriedad y capacidad de inversión",
+    "point2": "Alinear oportunidades con su perfil específico",
+    "point3": "Proteger la confidencialidad de los vendedores",
+    "point4": "Optimizar su tiempo presentando solo lo relevante",
+    "noCommitment": "Este paso no genera compromiso alguno. Es simplemente el protocolo que habilita el acceso a un pipeline curado de oportunidades.",
+    "timeRequired": "Tiempo requerido:",
+    "timeValue": "3 minutos",
+    "initialResponse": "Respuesta inicial:",
+    "responseValue": "48 horas hábiles",
+    "cta": "Iniciar Validación"
+  },
+  "whatIncludes": {
+    "title": "Más que un teaser",
+    "intro": "Cada oportunidad presentada incluye documentación completa:",
+    "point1": "Plan de negocio detallado",
+    "point2": "Proyecciones financieras con supuestos explícitos",
+    "point3": "Análisis de riesgo contextualizado al mercado argentino",
+    "point4": "Due diligence preliminar",
+    "point5": "Términos de exclusividad temporal",
+    "conclusion": "No compartimos \"ideas\". Compartimos casos de inversión estructurados."
+  },
+  "whoFor": {
+    "title": "Perfil de inversor",
+    "subtitle": "Este servicio es para:",
+    "description": "Family Offices e Inversores Individuales que Buscan Exposición Directa a Activos Argentinos"
+  },
+  "whoWeAre": {
+    "title": "Trayectoria que importa",
+    "intro": "Consultoría fundada por un equipo multidisciplinario con experiencia en:",
+    "realEstate": "Real Estate",
+    "realEstateDetail": "(certificado)",
+    "engineering": "Ingeniería en Sistemas",
+    "engineeringDetail": "(análisis de datos)",
+    "design": "Diseño",
+    "designDetail": "(visión de producto)",
+    "finance": "Finanzas",
+    "financeDetail": "(modelado y proyecciones)",
+    "execution": "Ejecución de proyectos",
+    "executionDetail": "(implementación real)",
+    "leadership": "Liderazgo",
+    "leadershipDetail": "(trabajo en equipo y valores)",
+    "evaluation": "Evaluación de oportunidades desde múltiples ángulos: viabilidad técnica, potencial de mercado, retorno financiero y factibilidad de ejecución.",
+    "conclusion": "Nos especializamos en descubrimiento y análisis de valor."
+  },
+  "footerCta": {
+    "title": "Próximo paso",
+    "description": "Complete el formulario de validación. Responderemos dentro de 48 horas hábiles con los próximos pasos.",
+    "cta": "Solicitar Acceso a Oportunidades",
+    "contact": "Contacto",
+    "linkedin": "LinkedIn",
+    "termsPrivacy": "Términos y Privacidad",
+    "copyright": "© 2025 Trapial Group"
+  },
+  "form": {
+    "back": "Volver",
+    "title": "Solicitar Acceso a Oportunidades",
+    "subtitle": "Complete este formulario para comenzar el proceso de validación",
+    "badge1": "Estrictamente confidencial",
+    "badge2": "Completado en 3 minutos",
+    "badge3": "Sin compromiso requerido",
+    "loading": "Cargando…"
+  }
+}

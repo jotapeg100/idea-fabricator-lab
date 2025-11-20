@@ -2,10 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const AccessForm = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,9 +27,10 @@ const AccessForm = () => {
               className="gap-2"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back
+              {t('form.back')}
             </Button>
             <Logo />
+            <LanguageSwitcher />
           </div>
         </div>
       </header>
@@ -35,19 +39,19 @@ const AccessForm = () => {
       <main className="container mx-auto px-4 pt-32 pb-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="mb-4">Request Access to Opportunities</h1>
+            <h1 className="mb-4">{t('form.title')}</h1>
             <p className="text-xl text-muted-foreground mb-6">
-              Complete this form to begin the validation process
+              {t('form.subtitle')}
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                Strictly confidential
+                {t('form.badge1')}
               </span>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                3-minute completion
+                {t('form.badge2')}
               </span>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                No commitment required
+                {t('form.badge3')}
               </span>
             </div>
           </div>
@@ -64,7 +68,7 @@ const AccessForm = () => {
               className="w-full max-w-[640px] border-0"
               title="Access Request Form"
             >
-              Cargando…
+              {t('form.loading')}
             </iframe>
           </div>
         </div>
