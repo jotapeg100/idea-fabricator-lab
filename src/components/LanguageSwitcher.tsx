@@ -15,26 +15,32 @@ export const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
+  // Show the opposite language (the one to switch to)
+  const displayLanguage = i18n.language === 'es' ? 'en' : 'es';
+  const displayFlag = displayLanguage === 'en' ? '🇺🇸' : '🇪🇸';
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="gap-2">
-          <Languages className="h-4 w-4" />
-          <span className="uppercase">{i18n.language}</span>
+          <span className="text-lg">{displayFlag}</span>
+          <span className="uppercase font-medium">{displayLanguage}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="bg-background z-50">
         <DropdownMenuItem 
           onClick={() => changeLanguage('en')}
-          className="cursor-pointer"
+          className="cursor-pointer gap-2"
         >
-          English
+          <span className="text-lg">🇺🇸</span>
+          <span>English</span>
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => changeLanguage('es')}
-          className="cursor-pointer"
+          className="cursor-pointer gap-2"
         >
-          Español
+          <span className="text-lg">🇪🇸</span>
+          <span>Español</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
