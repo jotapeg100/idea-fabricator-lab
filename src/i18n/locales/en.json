@@ -1,6 +1,7 @@
 {
   "header": {
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "aboutUs": "About Us"
   },
   "hero": {
     "title": "We transform opportunities into valuable assets",
@@ -82,5 +83,63 @@
     "badge2": "3-minute completion",
     "badge3": "No commitment required",
     "loading": "Loading…"
+  },
+  "about": {
+    "nav": {
+      "home": "Home"
+    },
+    "intro": {
+      "title": "A team that builds, not just advises",
+      "description": "Trapial Group is born from the experience of professionals who have been on the other side of the table: founding companies, closing deals, writing code, and taking real risks. That experience is what we bring to every project."
+    },
+    "history": {
+      "title": "Our History",
+      "paragraph1": "The founding team of Trapial has roots in Asamblo, a fintech-specialized software factory that was acquired by a European payments processor that today handles over €1 billion monthly.",
+      "paragraph2": "That experience taught us what works and what doesn't when building high-impact technology products. It also showed us the value of combining technical vision with deep business understanding.",
+      "paragraph3": "Today, under Trapial Group, we apply those lessons on two fronts: technology and investment development. Two distinct verticals, united by the same philosophy: identify real opportunities and execute with excellence."
+    },
+    "team": {
+      "title": "Team",
+      "specialtiesLabel": "Specialties:",
+      "luciano": {
+        "role": "Founder - CTO & Tech Lead",
+        "description": "Software engineer with over 15 years of experience in architecture and development of highly complex systems. Led Asamblo's technical team from its founding to its acquisition.",
+        "specialties": "Backend development, distributed systems architecture, fintech integrations, technical team leadership."
+      },
+      "nicolas": {
+        "role": "Founder - Chief Architect",
+        "description": "Senior software architect with extensive experience in designing scalable and mission-critical solutions. Part of Asamblo's founding technical team.",
+        "specialties": "Software architecture, API design, high-availability systems, legacy systems modernization."
+      },
+      "juanpablo": {
+        "role": "Founder - Managing Director",
+        "description": "Executive with over 15 years in technology, fintech, and business development in Latin America and US. Former CCO of Asamblo, with experience at PayRetailers, 451°, and other companies in the regional payments ecosystem.",
+        "specialties": "Business development, program management, commercial strategy, digital payments, LATAM markets."
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "execution": {
+        "title": "Execution over theory",
+        "description": "We prefer doing over talking. Every project has concrete and measurable deliverables."
+      },
+      "transparency": {
+        "title": "Radical transparency",
+        "description": "We say what we think, even when it's not what the client wants to hear. It's the only way to build trust."
+      },
+      "longTerm": {
+        "title": "Long term",
+        "description": "We don't look for one-time projects. We build relationships that last years."
+      },
+      "quality": {
+        "title": "Quality without compromise",
+        "description": "We prefer to say no to a project rather than deliver something we're not proud of."
+      }
+    },
+    "cta": {
+      "title": "Want to know us better?",
+      "description": "Schedule a call with no commitment. Tell us about your project and let's see if we can help.",
+      "button": "Contact"
+    }
   }
 }
