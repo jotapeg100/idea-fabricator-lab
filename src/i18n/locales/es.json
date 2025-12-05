@@ -1,6 +1,7 @@
 {
   "header": {
-    "getStarted": "Comenzar"
+    "getStarted": "Comenzar",
+    "aboutUs": "Nosotros"
   },
   "hero": {
     "title": "Transformamos oportunidades en activos de valor",
@@ -82,5 +83,63 @@
     "badge2": "Completado en 3 minutos",
     "badge3": "Sin compromiso requerido",
     "loading": "Cargando…"
+  },
+  "about": {
+    "nav": {
+      "home": "Inicio"
+    },
+    "intro": {
+      "title": "Un equipo que construye, no solo asesora",
+      "description": "Trapial Group nace de la experiencia de profesionales que han estado del otro lado de la mesa: fundando empresas, cerrando deals, escribiendo código, y tomando riesgos reales. Esa experiencia es lo que traemos a cada proyecto."
+    },
+    "history": {
+      "title": "Nuestra Historia",
+      "paragraph1": "El equipo fundador de Trapial tiene raíces en Asamblo, una software factory especializada en fintech que fue adquirida por un procesador de pagos europeo que hoy opera más de €1.000 millones mensuales.",
+      "paragraph2": "Esa experiencia nos enseñó qué funciona y qué no cuando se construyen productos tecnológicos de alto impacto. También nos mostró el valor de combinar visión técnica con entendimiento profundo del negocio.",
+      "paragraph3": "Hoy, bajo Trapial Group, aplicamos esas lecciones en dos frentes: tecnología y desarrollo de inversiones. Dos verticales distintas, unidas por la misma filosofía: identificar oportunidades reales y ejecutar con excelencia."
+    },
+    "team": {
+      "title": "Equipo",
+      "specialtiesLabel": "Especialidades:",
+      "luciano": {
+        "role": "Founder - CTO & Tech Lead",
+        "description": "Ingeniero de software con más de 15 años de experiencia en arquitectura y desarrollo de sistemas de alta complejidad. Lideró el equipo técnico de Asamblo desde su fundación hasta su adquisición.",
+        "specialties": "Backend development, arquitectura de sistemas distribuidos, integraciones fintech, liderazgo de equipos técnicos."
+      },
+      "nicolas": {
+        "role": "Founder - Chief Architect",
+        "description": "Arquitecto de software senior con amplia experiencia en diseño de soluciones escalables y de misión crítica. Parte del equipo fundador técnico de Asamblo.",
+        "specialties": "Arquitectura de software, diseño de APIs, sistemas de alta disponibilidad, modernización de legacy systems."
+      },
+      "juanpablo": {
+        "role": "Founder - Managing Director",
+        "description": "Ejecutivo con más de 15 años en tecnología, fintech y desarrollo de negocios en América Latina y US. Ex-CCO de Asamblo, con experiencia en PayRetailers, 451° y otras empresas del ecosistema de pagos regional.",
+        "specialties": "Business development, program management, estrategia comercial, pagos digitales, mercados LATAM."
+      }
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "execution": {
+        "title": "Ejecución sobre teoría",
+        "description": "Preferimos hacer que hablar. Cada proyecto tiene entregables concretos y medibles."
+      },
+      "transparency": {
+        "title": "Transparencia radical",
+        "description": "Decimos lo que pensamos, incluso cuando no es lo que el cliente quiere escuchar. Es la única forma de construir confianza."
+      },
+      "longTerm": {
+        "title": "Largo plazo",
+        "description": "No buscamos proyectos de una vez. Construimos relaciones que duran años."
+      },
+      "quality": {
+        "title": "Calidad sin compromisos",
+        "description": "Preferimos decir que no a un proyecto antes que entregar algo de lo que no estemos orgullosos."
+      }
+    },
+    "cta": {
+      "title": "¿Querés conocernos mejor?",
+      "description": "Agendá una llamada sin compromiso. Contanos tu proyecto y veamos si podemos ayudarte.",
+      "button": "Contactar"
+    }
   }
 }

@@ -3,6 +3,7 @@ import { ArrowRight, Code, TrendingUp, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-patagonia.jpg";
 
 const Index = () => {
@@ -19,7 +20,12 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Logo />
-          <LanguageSwitcher />
+          <div className="flex items-center gap-4">
+            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-smooth">
+              {t('header.aboutUs')}
+            </Link>
+            <LanguageSwitcher />
+          </div>
         </div>
       </header>
 
