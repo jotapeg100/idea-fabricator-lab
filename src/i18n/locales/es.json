@@ -3,86 +3,72 @@
     "getStarted": "Comenzar"
   },
   "hero": {
-    "title": "Inversiones estratégicas en Argentina",
-    "subtitle": "Descubrimiento, análisis y acceso exclusivo a oportunidades de alto rendimiento."
+    "title": "Transformamos oportunidades en activos de valor",
+    "subtitle": "Consultoría estratégica en tecnología y desarrollo de inversiones. Un equipo senior con track record de exits y ejecución comprobada en América Latina.",
+    "cta": "Conversemos"
   },
-  "whyArgentina": {
-    "title": "Tierra de oportunidades reales",
-    "intro": "Argentina posee fundamentos excepcionales que no se reflejan en las valuaciones actuales:",
-    "point1": "2da reserva mundial de gas no convencional",
-    "point2": "4ta reserva mundial de litio",
-    "point3": "Tierra agrícola entre las más productivas del planeta",
-    "point4": "Capital humano de clase mundial",
-    "conclusion": "La brecha entre valor intrínseco y precio de mercado crea ventanas únicas para inversores informados."
-  },
-  "whatWeDo": {
-    "title": "Tres competencias, un objetivo",
-    "discovery": {
-      "title": "Descubrimiento",
-      "description": "Identificamos activos, negocios y oportunidades que están fuera del alcance de la búsqueda convencional."
+  "valueProposition": {
+    "strategy": {
+      "title": "Estrategia + Ejecución",
+      "description": "No somos una consultora que entrega PowerPoints. Diseñamos la estrategia y nos involucramos en la ejecución. Nuestro éxito se mide en resultados, no en reportes."
     },
-    "analysis": {
-      "title": "Análisis",
-      "description": "Desarrollamos planes de negocio completos con proyecciones verificables y supuestos transparentes."
+    "team": {
+      "title": "Equipo Senior",
+      "description": "Fundadores con +15 años de experiencia en tecnología, finanzas y desarrollo de negocios. Track record que incluye un exit de €1.5M a procesador europeo de pagos."
     },
-    "representation": {
-      "title": "Representación exclusiva",
-      "description": "Presentamos cada oportunidad a un grupo selecto de inversores validados, garantizando acceso preferencial."
+    "vision": {
+      "title": "Visión LATAM",
+      "description": "Conocimiento profundo de mercados latinoamericanos. Operamos desde Argentina con alcance regional y conexiones globales."
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "intro": "Dos verticales de negocio bajo una misma visión: identificar oportunidades de alto potencial y convertirlas en realidad.",
+    "forWhom": "Para quién:",
+    "tech": {
+      "name": "Trapial Tech",
+      "tagline": "Software & Consultoría Tecnológica",
+      "description": "Software factory boutique para empresas que necesitan escalar con tecnología de primer nivel.",
+      "point1": "Desarrollo de software a medida: aplicaciones web, mobile, APIs, integraciones complejas.",
+      "point2": "Inteligencia Artificial: automatización de procesos, chatbots inteligentes, análisis predictivo.",
+      "point3": "Fintech & Pagos: integraciones con procesadores, pasarelas de pago, compliance.",
+      "point4": "Tokenización & Blockchain: activos digitales, trazabilidad, contratos inteligentes.",
+      "point5": "Consultoría técnica: arquitectura, due diligence tecnológico, roadmap de producto.",
+      "audience": "Startups en crecimiento que necesitan escalar rápido. Empresas establecidas que quieren dar el salto tecnológico."
     },
-    "cta": "Explorar Oportunidades"
+    "investments": {
+      "name": "Trapial Investments",
+      "tagline": "Desarrollo de Inversiones",
+      "description": "Estructuración y desarrollo de proyectos de inversión en activos reales, con foco en Patagonia Argentina.",
+      "point1": "Real Estate: desarrollo inmobiliario en zonas de alto potencial.",
+      "point2": "Agronegocios: proyectos productivos con visión de largo plazo.",
+      "point3": "Estructuración de deals: análisis, due diligence, armado de vehículos de inversión.",
+      "audience": "Inversores que buscan exposición a activos reales en Argentina con gestión profesional y transparente."
+    }
   },
-  "howWeWork": {
-    "title": "Proceso de validación",
-    "question": "¿Por qué solicitamos información antes de compartir oportunidades?",
-    "answer": "Porque la información que manejamos es sensible y los activos que representamos son únicos.",
-    "point1": "Confirmar seriedad y capacidad de inversión",
-    "point2": "Alinear oportunidades con su perfil específico",
-    "point3": "Proteger la confidencialidad de los vendedores",
-    "point4": "Optimizar su tiempo presentando solo lo relevante",
-    "noCommitment": "Este paso no genera compromiso alguno. Es simplemente el protocolo que habilita el acceso a un pipeline curado de oportunidades.",
-    "timeRequired": "Tiempo requerido:",
-    "timeValue": "3 minutos",
-    "initialResponse": "Respuesta inicial:",
-    "responseValue": "48 horas hábiles",
-    "cta": "Iniciar Validación"
-  },
-  "whatIncludes": {
-    "title": "Más que un teaser",
-    "intro": "Cada oportunidad presentada incluye documentación completa:",
-    "point1": "Plan de negocio detallado",
-    "point2": "Proyecciones financieras con supuestos explícitos",
-    "point3": "Análisis de riesgo contextualizado al mercado argentino",
-    "point4": "Due diligence preliminar",
-    "point5": "Términos de exclusividad temporal",
-    "conclusion": "No compartimos \"ideas\". Compartimos casos de inversión estructurados."
-  },
-  "whoFor": {
-    "title": "Perfil de inversor",
-    "subtitle": "Este servicio es para:",
-    "description": "Family Offices e Inversores Individuales que Buscan Exposición Directa a Activos Argentinos"
-  },
-  "whoWeAre": {
-    "title": "Trayectoria que importa",
-    "intro": "Consultoría fundada por un equipo multidisciplinario con experiencia en:",
-    "realEstate": "Real Estate",
-    "realEstateDetail": "(certificado)",
-    "engineering": "Ingeniería en Sistemas",
-    "engineeringDetail": "(análisis de datos)",
-    "design": "Diseño",
-    "designDetail": "(visión de producto)",
-    "finance": "Finanzas",
-    "financeDetail": "(modelado y proyecciones)",
-    "execution": "Ejecución de proyectos",
-    "executionDetail": "(implementación real)",
-    "leadership": "Liderazgo",
-    "leadershipDetail": "(trabajo en equipo y valores)",
-    "evaluation": "Evaluación de oportunidades desde múltiples ángulos: viabilidad técnica, potencial de mercado, retorno financiero y factibilidad de ejecución.",
-    "conclusion": "Nos especializamos en descubrimiento y análisis de valor."
+  "whyTrapial": {
+    "title": "¿Por qué Trapial?",
+    "trackRecord": {
+      "title": "Track Record Comprobado",
+      "description": "El equipo fundador construyó y vendió Asamblo, una software factory adquirida por un procesador de pagos europeo que opera más de €1B mensual. Sabemos cómo crear valor."
+    },
+    "senior": {
+      "title": "100% Senior",
+      "description": "No tercerizamos en juniors. Cada proyecto es atendido directamente por fundadores y socios con más de una década de experiencia en sus campos."
+    },
+    "boutique": {
+      "title": "Boutique",
+      "description": "Trabajamos con pocos clientes a la vez. Esto nos permite involucrarnos profundamente en cada proyecto y garantizar resultados."
+    },
+    "skinInTheGame": {
+      "title": "Skin in the Game",
+      "description": "No cobramos solo por hora. Estamos dispuestos a estructurar acuerdos donde nuestro éxito dependa del tuyo."
+    }
   },
   "footerCta": {
-    "title": "Próximo paso",
-    "description": "Complete el formulario de validación. Responderemos dentro de 48 horas hábiles con los próximos pasos.",
-    "cta": "Solicitar Acceso a Oportunidades",
+    "title": "¿Tenés un proyecto en mente?",
+    "description": "Ya sea que necesites escalar tu tecnología o explorar una oportunidad de inversión, queremos escucharte.",
+    "cta": "Agendá una conversación",
     "contact": "Contacto",
     "linkedin": "LinkedIn",
     "termsPrivacy": "Términos y Privacidad",

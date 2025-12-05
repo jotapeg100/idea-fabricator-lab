@@ -1,16 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { ArrowRight, Code, TrendingUp, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroImage from "@/assets/hero-patagonia.jpg";
-import mendozaImage from "@/assets/mendoza-vineyards.jpg";
-import iguazuImage from "@/assets/iguazu-falls.jpg";
-import pampasImage from "@/assets/pampas-sunset.jpg";
 
 const Index = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
   
   const scrollToSection = (id: string) => {
@@ -33,314 +28,188 @@ const Index = () => {
         <div
           className="absolute inset-0 z-0 grid-overlay"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImage})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="mb-6 animate-fade-in">
+          <h1 className="mb-6 animate-fade-in max-w-4xl mx-auto">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-3xl mx-auto font-light animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto font-light animate-fade-in leading-relaxed" style={{ animationDelay: "0.2s" }}>
             {t('hero.subtitle')}
           </p>
           <Button 
             size="lg"
             className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto animate-fade-in shadow-medium"
             style={{ animationDelay: "0.4s" }}
-            onClick={() => scrollToSection("how-we-work")}
+            onClick={() => scrollToSection("contact")}
           >
-            {t('header.getStarted')} <ArrowRight className="ml-2 h-5 w-5" />
+            {t('hero.cta')} <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </section>
 
-      {/* Why Argentina */}
-      <section id="why-argentina" className="py-24 md:py-32 bg-background">
+      {/* Value Proposition - 3 Columns */}
+      <section id="value-proposition" className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="mb-8 text-foreground">{t('whyArgentina.title')}</h2>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
-              {t('whyArgentina.intro')}
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">{t('whyArgentina.point1')}</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">{t('whyArgentina.point2')}</p>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">{t('whyArgentina.point3')}</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg">{t('whyArgentina.point4')}</p>
-                </div>
-              </div>
-            </div>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('whyArgentina.conclusion')}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Do */}
-      <section id="what-we-do" className="py-24 md:py-32 gradient-subtle">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="mb-16 text-center text-foreground">{t('whatWeDo.title')}</h2>
-            
-            <div className="grid md:grid-cols-3 gap-12 mb-16">
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <div className="w-3 h-3 rounded-full bg-primary" />
-                </div>
-                <h3 className="text-2xl font-bold">{t('whatWeDo.discovery.title')}</h3>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-foreground">{t('valueProposition.strategy.title')}</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  {t('whatWeDo.discovery.description')}
+                  {t('valueProposition.strategy.description')}
                 </p>
               </div>
               
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <div className="w-3 h-3 rounded-full bg-primary" />
-                </div>
-                <h3 className="text-2xl font-bold">{t('whatWeDo.analysis.title')}</h3>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-foreground">{t('valueProposition.team.title')}</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  {t('whatWeDo.analysis.description')}
+                  {t('valueProposition.team.description')}
                 </p>
               </div>
               
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <div className="w-3 h-3 rounded-full bg-primary" />
-                </div>
-                <h3 className="text-2xl font-bold">{t('whatWeDo.representation.title')}</h3>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-foreground">{t('valueProposition.vision.title')}</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  {t('whatWeDo.representation.description')}
+                  {t('valueProposition.vision.description')}
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-24 md:py-32 gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="mb-8 text-center text-foreground">{t('services.title')}</h2>
+            <p className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto leading-relaxed">
+              {t('services.intro')}
+            </p>
             
-            <div className="text-center">
-              <Button 
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto shadow-soft"
-                onClick={() => scrollToSection("contact")}
-              >
-                {t('whatWeDo.cta')} <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Trapial Tech */}
+              <div className="bg-background rounded-2xl p-8 shadow-soft">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Code className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">{t('services.tech.name')}</h3>
+                    <p className="text-muted-foreground">{t('services.tech.tagline')}</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  {t('services.tech.description')}
+                </p>
+                
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.tech.point1')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.tech.point2')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.tech.point3')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.tech.point4')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.tech.point5')}</span>
+                  </li>
+                </ul>
+                
+                <p className="text-sm text-muted-foreground italic">
+                  <span className="font-semibold text-foreground">{t('services.forWhom')}</span> {t('services.tech.audience')}
+                </p>
+              </div>
+              
+              {/* Trapial Investments */}
+              <div className="bg-background rounded-2xl p-8 shadow-soft">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">{t('services.investments.name')}</h3>
+                    <p className="text-muted-foreground">{t('services.investments.tagline')}</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  {t('services.investments.description')}
+                </p>
+                
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.investments.point1')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.investments.point2')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-foreground">{t('services.investments.point3')}</span>
+                  </li>
+                </ul>
+                
+                <p className="text-sm text-muted-foreground italic">
+                  <span className="font-semibold text-foreground">{t('services.forWhom')}</span> {t('services.investments.audience')}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Image Section - Vineyards */}
-      <section className="h-[60vh] relative">
-        <div 
-          className="absolute inset-0 grid-overlay"
-          style={{
-            backgroundImage: `url(${mendozaImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        />
-      </section>
-
-      {/* How We Work */}
-      <section id="how-we-work" className="py-24 md:py-32 bg-background">
+      {/* Why Trapial - 4 Boxes */}
+      <section id="why-trapial" className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="mb-8 text-foreground">{t('howWeWork.title')}</h2>
-            <p className="text-2xl text-muted-foreground mb-12 leading-relaxed">
-              {t('howWeWork.question')}
-            </p>
-            <p className="text-xl text-foreground mb-12 leading-relaxed">
-              {t('howWeWork.answer')}
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="mb-16 text-center text-foreground">{t('whyTrapial.title')}</h2>
             
-            <div className="space-y-6 mb-16">
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('howWeWork.point1')}</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl">
+                <h3 className="text-xl font-bold text-foreground mb-4">{t('whyTrapial.trackRecord.title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('whyTrapial.trackRecord.description')}
+                </p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('howWeWork.point2')}</p>
+              
+              <div className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl">
+                <h3 className="text-xl font-bold text-foreground mb-4">{t('whyTrapial.senior.title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('whyTrapial.senior.description')}
+                </p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('howWeWork.point3')}</p>
+              
+              <div className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl">
+                <h3 className="text-xl font-bold text-foreground mb-4">{t('whyTrapial.boutique.title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('whyTrapial.boutique.description')}
+                </p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-7 w-7 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('howWeWork.point4')}</p>
+              
+              <div className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl">
+                <h3 className="text-xl font-bold text-foreground mb-4">{t('whyTrapial.skinInTheGame.title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('whyTrapial.skinInTheGame.description')}
+                </p>
               </div>
             </div>
-            
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              {t('howWeWork.noCommitment')}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 text-lg text-muted-foreground mb-12">
-              <div className="flex-1">
-                <span className="font-semibold text-foreground">{t('howWeWork.timeRequired')}</span> {t('howWeWork.timeValue')}
-              </div>
-              <div className="flex-1">
-                <span className="font-semibold text-foreground">{t('howWeWork.initialResponse')}</span> {t('howWeWork.responseValue')}
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <Button 
-                size="lg"
-                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-6 h-auto shadow-soft"
-                onClick={() => navigate("/form")}
-              >
-                {t('howWeWork.cta')} <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Image Section - Iguazu */}
-      <section className="h-[60vh] relative">
-        <div 
-          className="absolute inset-0 grid-overlay"
-          style={{
-            backgroundImage: `url(${iguazuImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        />
-      </section>
-
-      {/* What It Includes */}
-      <section id="what-includes" className="py-24 md:py-32 gradient-subtle">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="mb-8 text-foreground">{t('whatIncludes.title')}</h2>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              {t('whatIncludes.intro')}
-            </p>
-            
-            <div className="space-y-6 mb-12">
-              <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
-                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('whatIncludes.point1')}</p>
-              </div>
-              <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
-                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('whatIncludes.point2')}</p>
-              </div>
-              <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
-                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('whatIncludes.point3')}</p>
-              </div>
-              <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
-                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('whatIncludes.point4')}</p>
-              </div>
-              <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-soft">
-                <ArrowRight className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-xl">{t('whatIncludes.point5')}</p>
-              </div>
-            </div>
-            
-            <p className="text-2xl font-semibold text-foreground text-center">
-              {t('whatIncludes.conclusion')}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Who This Is For */}
-      <section id="who-for" className="py-24 md:py-32 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-8 text-foreground">{t('whoFor.title')}</h2>
-            <p className="text-xl text-muted-foreground mb-8">{t('whoFor.subtitle')}</p>
-            <p className="text-3xl md:text-4xl font-bold text-foreground leading-relaxed">
-              {t('whoFor.description')}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Image Section - Pampas */}
-      <section className="h-[60vh] relative">
-        <div 
-          className="absolute inset-0 grid-overlay"
-          style={{
-            backgroundImage: `url(${pampasImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        />
-      </section>
-
-      {/* Who We Are */}
-      <section id="who-we-are" className="py-24 md:py-32 gradient-subtle">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="mb-8 text-foreground">{t('whoWeAre.title')}</h2>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              {t('whoWeAre.intro')}
-            </p>
-            
-            <div className="grid sm:grid-cols-2 gap-8 mb-12">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.realEstate')}</span> {t('whoWeAre.realEstateDetail')}</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.engineering')}</span> {t('whoWeAre.engineeringDetail')}</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.design')}</span> {t('whoWeAre.designDetail')}</p>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.finance')}</span> {t('whoWeAre.financeDetail')}</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.execution')}</span> {t('whoWeAre.executionDetail')}</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-3" />
-                  <p className="text-xl"><span className="font-semibold">{t('whoWeAre.leadership')}</span> {t('whoWeAre.leadershipDetail')}</p>
-                </div>
-              </div>
-            </div>
-            
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              {t('whoWeAre.evaluation')}
-            </p>
-            
-            <p className="text-2xl font-semibold text-foreground">
-              {t('whoWeAre.conclusion')}
-            </p>
           </div>
         </div>
       </section>
@@ -350,13 +219,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="mb-8 text-white">{t('footerCta.title')}</h2>
-            <p className="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
               {t('footerCta.description')}
             </p>
             <Button 
               size="lg"
               className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-8 h-auto shadow-medium"
-              onClick={() => navigate("/form")}
+              onClick={() => scrollToSection("contact")}
             >
               {t('footerCta.cta')} <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
@@ -365,7 +234,7 @@ const Index = () => {
           <div className="border-t border-white/20 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
             <Logo variant="footer" className="[&_span]:text-white [&_svg]:text-white" />
             <div className="flex flex-col sm:flex-row gap-6 items-center text-lg opacity-90">
-              <a href="mailto:contact@example.com" className="hover:underline transition-smooth">
+              <a href="mailto:contact@trapial.com" className="hover:underline transition-smooth">
                 {t('footerCta.contact')}
               </a>
               <a href="#" className="hover:underline transition-smooth">
