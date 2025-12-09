@@ -105,7 +105,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             variants={fadeInUp}
           >
-            <h1 className="mb-8 text-foreground">{t('about.intro.title')}</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-foreground">{t('about.intro.title')}</h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               {t('about.intro.description')}
             </p>
@@ -124,7 +124,7 @@ const About = () => {
             variants={staggerContainer}
           >
             <motion.h2 
-              className="mb-8 text-foreground"
+              className="text-3xl md:text-4xl font-bold mb-8 text-foreground"
               variants={fadeInLeft}
               transition={{ duration: 0.5 }}
             >
@@ -144,7 +144,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.h2 
-              className="mb-12 text-center text-foreground"
+              className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -196,7 +196,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.h2 
-              className="mb-12 text-center text-foreground"
+              className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -241,7 +241,7 @@ const About = () => {
             variants={staggerContainer}
           >
             <motion.h2 
-              className="mb-6 text-white"
+              className="text-3xl md:text-4xl font-bold mb-6 text-white"
               variants={fadeInUp}
               transition={{ duration: 0.5 }}
             >
