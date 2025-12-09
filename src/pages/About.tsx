@@ -5,6 +5,7 @@ import { Logo } from "@/components/Logo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import aboutHeroImage from "@/assets/about-hero.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -94,19 +95,27 @@ const About = () => {
         </div>
       </header>
 
-      {/* Intro Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-background">
-        <div className="container mx-auto px-4">
+      {/* Intro Section with Hero Background */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${aboutHeroImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="relative z-10 container mx-auto px-4">
           <motion.div 
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center text-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             variants={fadeInUp}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-foreground">{t('about.intro.title')}</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">{t('about.intro.title')}</h1>
+            <p className="text-xl md:text-2xl leading-relaxed opacity-90">
               {t('about.intro.description')}
             </p>
           </motion.div>
