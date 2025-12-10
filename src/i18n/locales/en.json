@@ -26,6 +26,7 @@
     "title": "Our Services",
     "intro": "Two business verticals under one vision: identify high-potential opportunities and turn them into reality.",
     "forWhom": "For whom:",
+    "learnMore": "Learn more",
     "tech": {
       "name": "Trapial Tech",
       "tagline": "Software & Technology Consulting",
@@ -140,6 +141,222 @@
       "title": "Want to know us better?",
       "description": "Schedule a call with no commitment. Tell us about your project and let's see if we can help.",
       "button": "Contact"
+    }
+  },
+  "techPage": {
+    "nav": {
+      "home": "Home",
+      "investments": "Trapial Investments"
+    },
+    "hero": {
+      "badge": "Software & Technology Consulting",
+      "title": "Build technology that scales",
+      "subtitle": "From custom development to AI integration. A senior team with 15+ years building mission-critical systems for fintech, payments, and high-growth companies.",
+      "cta": "Start your project"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "End-to-end technology solutions built by senior engineers who understand business outcomes.",
+      "customDev": {
+        "title": "Custom Software Development",
+        "description": "Bespoke web and mobile applications built for scale, security, and performance.",
+        "point1": "Full-stack web applications with React, Node.js, and cloud-native architecture",
+        "point2": "Native and cross-platform mobile apps for iOS and Android",
+        "point3": "Complex API integrations and microservices architecture"
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "Practical AI solutions that automate processes and unlock insights from your data.",
+        "point1": "Intelligent chatbots and conversational AI for customer service",
+        "point2": "Process automation with machine learning models",
+        "point3": "Predictive analytics and business intelligence dashboards"
+      },
+      "fintech": {
+        "title": "Fintech & Payments",
+        "description": "Deep expertise in payments infrastructure built from our experience scaling Asamblo.",
+        "point1": "Payment processor integrations (Stripe, Adyen, local processors)",
+        "point2": "Payment gateway development and optimization",
+        "point3": "PCI compliance, KYC/AML, and regulatory requirements"
+      },
+      "blockchain": {
+        "title": "Tokenization & Blockchain",
+        "description": "Real-world asset tokenization and blockchain solutions for modern businesses.",
+        "point1": "Security token offerings and digital asset platforms",
+        "point2": "Smart contract development and auditing",
+        "point3": "Supply chain traceability and proof of provenance"
+      },
+      "consulting": {
+        "title": "Technical Consulting",
+        "description": "Strategic guidance for technology decisions that impact your business trajectory.",
+        "point1": "Architecture review and modernization roadmaps",
+        "point2": "Technology due diligence for M&A and investments",
+        "point3": "CTO-as-a-service for startups and scale-ups"
+      },
+      "integration": {
+        "title": "System Integration",
+        "description": "Connect your systems, data, and workflows for seamless operations.",
+        "point1": "Enterprise system integration (ERP, CRM, legacy systems)",
+        "point2": "Data pipeline and ETL development",
+        "point3": "Real-time event streaming and message queues"
+      }
+    },
+    "expertise": {
+      "title": "Technical Leadership",
+      "subtitle": "Every project is led directly by our founding team—senior engineers with proven track records.",
+      "luciano": {
+        "name": "Luciano Mazzola",
+        "role": "CTO & Tech Lead",
+        "focus": "Backend architecture, distributed systems, fintech integrations"
+      },
+      "nicolas": {
+        "name": "Nicolás Sosa",
+        "role": "Chief Architect",
+        "focus": "System design, API architecture, high-availability systems"
+      },
+      "juanpablo": {
+        "name": "Juan Pablo González",
+        "role": "Managing Director",
+        "focus": "Project strategy, client relations, business alignment"
+      }
+    },
+    "caseStudies": {
+      "title": "Proven Results",
+      "subtitle": "Real outcomes from projects we've delivered for clients across industries.",
+      "asamblo": {
+        "category": "Fintech",
+        "title": "Asamblo Payment Platform",
+        "description": "Built the core payment processing infrastructure that was acquired by a European processor handling €1B+ monthly.",
+        "result": "€1.5M Exit"
+      },
+      "fintech": {
+        "category": "Financial Services",
+        "title": "Multi-Country Payment Gateway",
+        "description": "Developed a payment gateway supporting 6 Latin American countries with real-time currency conversion and local payment methods.",
+        "result": "6 Countries Live"
+      },
+      "automation": {
+        "category": "AI & Automation",
+        "title": "Intelligent Document Processing",
+        "description": "AI-powered system that automated 80% of manual document review for a financial services company.",
+        "result": "80% Automation"
+      }
+    },
+    "cta": {
+      "title": "Ready to build something great?",
+      "description": "Tell us about your project and let's explore how we can help you achieve your technology goals.",
+      "button": "Schedule a call"
+    }
+  },
+  "investmentsPage": {
+    "nav": {
+      "home": "Home",
+      "tech": "Trapial Tech"
+    },
+    "hero": {
+      "badge": "Investment Development",
+      "title": "Real assets, real returns",
+      "subtitle": "Investment structuring and development in Argentina's most promising regions. Professional management with transparent, long-term partnerships.",
+      "cta": "Explore opportunities"
+    },
+    "thesis": {
+      "title": "Our Investment Thesis",
+      "opportunity": {
+        "title": "The Opportunity",
+        "description": "Argentina offers unique value propositions for patient capital: world-class natural resources, undervalued real estate in high-growth regions, and a sophisticated professional class. Patagonia, in particular, represents an emerging frontier for sustainable development and premium tourism."
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We identify, structure, and manage investment opportunities with a hands-on approach. Our team brings operational expertise, local networks, and a commitment to transparency that aligns our success with yours."
+      }
+    },
+    "services": {
+      "title": "Investment Services",
+      "subtitle": "Comprehensive support for investors seeking exposure to real assets in Argentina.",
+      "realEstate": {
+        "title": "Real Estate Development",
+        "description": "Strategic real estate projects in high-potential areas of Patagonia and beyond.",
+        "point1": "Land acquisition and development in emerging tourism corridors",
+        "point2": "Boutique hospitality projects targeting premium segments",
+        "point3": "Residential developments in growing urban centers"
+      },
+      "agribusiness": {
+        "title": "Agribusiness",
+        "description": "Productive agricultural projects with long-term value creation focus.",
+        "point1": "Premium wine and olive oil production in Mendoza",
+        "point2": "Sustainable cattle and sheep farming operations",
+        "point3": "Export-oriented agriculture with value-added processing"
+      },
+      "dealStructuring": {
+        "title": "Deal Structuring",
+        "description": "Professional structuring of investment vehicles tailored to your objectives.",
+        "point1": "SPV creation and corporate structuring",
+        "point2": "Tax-efficient structures for international investors",
+        "point3": "Partnership agreements and governance frameworks"
+      },
+      "assetManagement": {
+        "title": "Asset Management",
+        "description": "Ongoing oversight and optimization of your investment portfolio.",
+        "point1": "Regular performance reporting and financial statements",
+        "point2": "Operational management and local representation",
+        "point3": "Exit strategy planning and execution"
+      },
+      "landDevelopment": {
+        "title": "Land Development",
+        "description": "Converting raw land into productive or developed assets.",
+        "point1": "Zoning and permit acquisition",
+        "point2": "Infrastructure development and utilities",
+        "point3": "Master planning for mixed-use developments"
+      },
+      "dueDiligence": {
+        "title": "Due Diligence",
+        "description": "Comprehensive analysis before any investment commitment.",
+        "point1": "Legal and title verification",
+        "point2": "Environmental and regulatory assessment",
+        "point3": "Market analysis and valuation"
+      }
+    },
+    "expertise": {
+      "title": "Investment Leadership",
+      "subtitle": "Led by professionals with deep experience in Latin American markets.",
+      "lead": {
+        "name": "Juan Pablo González",
+        "role": "Managing Director, Investments",
+        "description": "Over 15 years of experience in business development and deal structuring across Latin America. Previously led commercial operations at Asamblo and held executive roles at leading regional fintech companies.",
+        "experience": "15+ years in LATAM markets",
+        "track": "Track record of successful exits",
+        "network": "Extensive local network",
+        "approach": "Hands-on operational approach"
+      }
+    },
+    "opportunities": {
+      "title": "Featured Opportunities",
+      "subtitle": "Current and upcoming investment projects we're structuring for qualified investors.",
+      "patagonia": {
+        "category": "Real Estate",
+        "title": "Patagonia Lake District Development",
+        "description": "Premium lakefront lots in one of Argentina's fastest-growing tourism destinations, with option for turnkey cabin construction.",
+        "location": "San Martín de los Andes",
+        "status": "Now Open"
+      },
+      "vineyard": {
+        "category": "Agribusiness",
+        "title": "Mendoza Boutique Vineyard",
+        "description": "Participating interest in an established boutique winery producing award-winning Malbec for export markets.",
+        "location": "Valle de Uco, Mendoza",
+        "status": "Coming Soon"
+      },
+      "agricultural": {
+        "category": "Agriculture",
+        "title": "Sustainable Grazing Operation",
+        "description": "Large-scale sustainable cattle operation on premium grasslands with certified organic and export-ready positioning.",
+        "location": "Patagonia",
+        "status": "Pre-Launch"
+      }
+    },
+    "cta": {
+      "title": "Interested in investing with us?",
+      "description": "Request access to our current opportunities. We work with qualified investors who share our long-term vision.",
+      "button": "Request access"
     }
   }
 }

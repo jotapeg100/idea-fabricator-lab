@@ -136,9 +136,12 @@ const Index = () => {
                   </li>
                 </ul>
                 
-                <p className="text-sm text-muted-foreground italic">
+                <p className="text-sm text-muted-foreground italic mb-4">
                   <span className="font-semibold text-foreground">{t('services.forWhom')}</span> {t('services.tech.audience')}
                 </p>
+                <Link to="/tech" className="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+                  {t('services.learnMore')} <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
               
               {/* Trapial Investments */}
@@ -172,9 +175,12 @@ const Index = () => {
                   </li>
                 </ul>
                 
-                <p className="text-sm text-muted-foreground italic">
+                <p className="text-sm text-muted-foreground italic mb-4">
                   <span className="font-semibold text-foreground">{t('services.forWhom')}</span> {t('services.investments.audience')}
                 </p>
+                <Link to="/investments" className="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+                  {t('services.learnMore')} <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
