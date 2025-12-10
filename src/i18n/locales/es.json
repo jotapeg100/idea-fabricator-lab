@@ -26,6 +26,7 @@
     "title": "Nuestros Servicios",
     "intro": "Dos verticales de negocio bajo una misma visión: identificar oportunidades de alto potencial y convertirlas en realidad.",
     "forWhom": "Para quién:",
+    "learnMore": "Conocer más",
     "tech": {
       "name": "Trapial Tech",
       "tagline": "Software & Consultoría Tecnológica",
@@ -140,6 +141,222 @@
       "title": "¿Querés conocernos mejor?",
       "description": "Agendá una llamada sin compromiso. Contanos tu proyecto y veamos si podemos ayudarte.",
       "button": "Contactar"
+    }
+  },
+  "techPage": {
+    "nav": {
+      "home": "Inicio",
+      "investments": "Trapial Investments"
+    },
+    "hero": {
+      "badge": "Software & Consultoría Tecnológica",
+      "title": "Construí tecnología que escala",
+      "subtitle": "Desde desarrollo a medida hasta integración de IA. Un equipo senior con más de 15 años construyendo sistemas de misión crítica para fintech, pagos y empresas de alto crecimiento.",
+      "cta": "Iniciá tu proyecto"
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Soluciones tecnológicas end-to-end construidas por ingenieros senior que entienden los resultados de negocio.",
+      "customDev": {
+        "title": "Desarrollo de Software a Medida",
+        "description": "Aplicaciones web y mobile personalizadas construidas para escalar, con seguridad y rendimiento.",
+        "point1": "Aplicaciones web full-stack con React, Node.js y arquitectura cloud-native",
+        "point2": "Apps móviles nativas y multiplataforma para iOS y Android",
+        "point3": "Integraciones de APIs complejas y arquitectura de microservicios"
+      },
+      "ai": {
+        "title": "Inteligencia Artificial",
+        "description": "Soluciones de IA prácticas que automatizan procesos y descubren insights en tus datos.",
+        "point1": "Chatbots inteligentes e IA conversacional para atención al cliente",
+        "point2": "Automatización de procesos con modelos de machine learning",
+        "point3": "Análisis predictivo y dashboards de business intelligence"
+      },
+      "fintech": {
+        "title": "Fintech & Pagos",
+        "description": "Experiencia profunda en infraestructura de pagos construida desde nuestra experiencia escalando Asamblo.",
+        "point1": "Integraciones con procesadores de pago (Stripe, Adyen, procesadores locales)",
+        "point2": "Desarrollo y optimización de pasarelas de pago",
+        "point3": "Compliance PCI, KYC/AML y requerimientos regulatorios"
+      },
+      "blockchain": {
+        "title": "Tokenización & Blockchain",
+        "description": "Tokenización de activos reales y soluciones blockchain para negocios modernos.",
+        "point1": "Security token offerings y plataformas de activos digitales",
+        "point2": "Desarrollo y auditoría de smart contracts",
+        "point3": "Trazabilidad en supply chain y prueba de procedencia"
+      },
+      "consulting": {
+        "title": "Consultoría Técnica",
+        "description": "Guía estratégica para decisiones tecnológicas que impactan la trayectoria de tu negocio.",
+        "point1": "Revisión de arquitectura y roadmaps de modernización",
+        "point2": "Due diligence tecnológico para M&A e inversiones",
+        "point3": "CTO-as-a-service para startups y scale-ups"
+      },
+      "integration": {
+        "title": "Integración de Sistemas",
+        "description": "Conectá tus sistemas, datos y flujos de trabajo para operaciones sin fricciones.",
+        "point1": "Integración de sistemas empresariales (ERP, CRM, sistemas legacy)",
+        "point2": "Desarrollo de pipelines de datos y ETL",
+        "point3": "Event streaming en tiempo real y colas de mensajes"
+      }
+    },
+    "expertise": {
+      "title": "Liderazgo Técnico",
+      "subtitle": "Cada proyecto es liderado directamente por nuestro equipo fundador—ingenieros senior con track record comprobado.",
+      "luciano": {
+        "name": "Luciano Mazzola",
+        "role": "CTO & Tech Lead",
+        "focus": "Arquitectura backend, sistemas distribuidos, integraciones fintech"
+      },
+      "nicolas": {
+        "name": "Nicolás Sosa",
+        "role": "Chief Architect",
+        "focus": "Diseño de sistemas, arquitectura de APIs, sistemas de alta disponibilidad"
+      },
+      "juanpablo": {
+        "name": "Juan Pablo González",
+        "role": "Managing Director",
+        "focus": "Estrategia de proyectos, relación con clientes, alineamiento de negocio"
+      }
+    },
+    "caseStudies": {
+      "title": "Resultados Comprobados",
+      "subtitle": "Resultados reales de proyectos que hemos entregado para clientes de diversas industrias.",
+      "asamblo": {
+        "category": "Fintech",
+        "title": "Plataforma de Pagos Asamblo",
+        "description": "Construimos la infraestructura core de procesamiento de pagos que fue adquirida por un procesador europeo que opera €1B+ mensual.",
+        "result": "Exit €1.5M"
+      },
+      "fintech": {
+        "category": "Servicios Financieros",
+        "title": "Gateway de Pagos Multi-País",
+        "description": "Desarrollamos una pasarela de pagos que soporta 6 países latinoamericanos con conversión de moneda en tiempo real y métodos de pago locales.",
+        "result": "6 Países Live"
+      },
+      "automation": {
+        "category": "IA & Automatización",
+        "title": "Procesamiento Inteligente de Documentos",
+        "description": "Sistema con IA que automatizó el 80% de la revisión manual de documentos para una empresa de servicios financieros.",
+        "result": "80% Automatización"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para construir algo grande?",
+      "description": "Contanos sobre tu proyecto y exploremos cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.",
+      "button": "Agendá una llamada"
+    }
+  },
+  "investmentsPage": {
+    "nav": {
+      "home": "Inicio",
+      "tech": "Trapial Tech"
+    },
+    "hero": {
+      "badge": "Desarrollo de Inversiones",
+      "title": "Activos reales, retornos reales",
+      "subtitle": "Estructuración y desarrollo de inversiones en las regiones más prometedoras de Argentina. Gestión profesional con partnerships transparentes y de largo plazo.",
+      "cta": "Explorar oportunidades"
+    },
+    "thesis": {
+      "title": "Nuestra Tesis de Inversión",
+      "opportunity": {
+        "title": "La Oportunidad",
+        "description": "Argentina ofrece propuestas de valor únicas para capital paciente: recursos naturales de clase mundial, real estate subvaluado en regiones de alto crecimiento, y una clase profesional sofisticada. Patagonia, en particular, representa una frontera emergente para desarrollo sustentable y turismo premium."
+      },
+      "approach": {
+        "title": "Nuestro Enfoque",
+        "description": "Identificamos, estructuramos y gestionamos oportunidades de inversión con un enfoque hands-on. Nuestro equipo aporta experiencia operativa, redes locales y un compromiso con la transparencia que alinea nuestro éxito con el tuyo."
+      }
+    },
+    "services": {
+      "title": "Servicios de Inversión",
+      "subtitle": "Soporte integral para inversores que buscan exposición a activos reales en Argentina.",
+      "realEstate": {
+        "title": "Desarrollo Inmobiliario",
+        "description": "Proyectos inmobiliarios estratégicos en áreas de alto potencial de Patagonia y más allá.",
+        "point1": "Adquisición y desarrollo de tierras en corredores turísticos emergentes",
+        "point2": "Proyectos de hospitalidad boutique enfocados en segmentos premium",
+        "point3": "Desarrollos residenciales en centros urbanos en crecimiento"
+      },
+      "agribusiness": {
+        "title": "Agronegocios",
+        "description": "Proyectos agrícolas productivos con foco en creación de valor a largo plazo.",
+        "point1": "Producción premium de vino y aceite de oliva en Mendoza",
+        "point2": "Operaciones sustentables de ganadería bovina y ovina",
+        "point3": "Agricultura orientada a exportación con procesamiento de valor agregado"
+      },
+      "dealStructuring": {
+        "title": "Estructuración de Deals",
+        "description": "Estructuración profesional de vehículos de inversión adaptados a tus objetivos.",
+        "point1": "Creación de SPVs y estructuración corporativa",
+        "point2": "Estructuras tax-efficient para inversores internacionales",
+        "point3": "Acuerdos de partnership y frameworks de gobernanza"
+      },
+      "assetManagement": {
+        "title": "Asset Management",
+        "description": "Supervisión continua y optimización de tu portfolio de inversiones.",
+        "point1": "Reportes de performance regulares y estados financieros",
+        "point2": "Gestión operativa y representación local",
+        "point3": "Planificación y ejecución de estrategia de exit"
+      },
+      "landDevelopment": {
+        "title": "Desarrollo de Tierras",
+        "description": "Conversión de tierras brutas en activos productivos o desarrollados.",
+        "point1": "Zonificación y adquisición de permisos",
+        "point2": "Desarrollo de infraestructura y servicios",
+        "point3": "Master planning para desarrollos de uso mixto"
+      },
+      "dueDiligence": {
+        "title": "Due Diligence",
+        "description": "Análisis integral antes de cualquier compromiso de inversión.",
+        "point1": "Verificación legal y de títulos",
+        "point2": "Evaluación ambiental y regulatoria",
+        "point3": "Análisis de mercado y valuación"
+      }
+    },
+    "expertise": {
+      "title": "Liderazgo en Inversiones",
+      "subtitle": "Liderado por profesionales con profunda experiencia en mercados latinoamericanos.",
+      "lead": {
+        "name": "Juan Pablo González",
+        "role": "Managing Director, Inversiones",
+        "description": "Más de 15 años de experiencia en desarrollo de negocios y estructuración de deals en América Latina. Anteriormente lideró operaciones comerciales en Asamblo y ocupó roles ejecutivos en empresas fintech líderes de la región.",
+        "experience": "15+ años en mercados LATAM",
+        "track": "Track record de exits exitosos",
+        "network": "Red local extensa",
+        "approach": "Enfoque operativo hands-on"
+      }
+    },
+    "opportunities": {
+      "title": "Oportunidades Destacadas",
+      "subtitle": "Proyectos de inversión actuales y próximos que estamos estructurando para inversores calificados.",
+      "patagonia": {
+        "category": "Real Estate",
+        "title": "Desarrollo Distrito de Lagos Patagonia",
+        "description": "Lotes premium frente al lago en uno de los destinos turísticos de más rápido crecimiento de Argentina, con opción de construcción llave en mano de cabañas.",
+        "location": "San Martín de los Andes",
+        "status": "Abierto"
+      },
+      "vineyard": {
+        "category": "Agronegocios",
+        "title": "Viñedo Boutique Mendoza",
+        "description": "Participación en una bodega boutique establecida que produce Malbec premiado para mercados de exportación.",
+        "location": "Valle de Uco, Mendoza",
+        "status": "Próximamente"
+      },
+      "agricultural": {
+        "category": "Agricultura",
+        "title": "Operación de Ganadería Sustentable",
+        "description": "Operación ganadera sustentable a gran escala en pasturas premium con posicionamiento orgánico certificado y listo para exportación.",
+        "location": "Patagonia",
+        "status": "Pre-Lanzamiento"
+      }
+    },
+    "cta": {
+      "title": "¿Interesado en invertir con nosotros?",
+      "description": "Solicitá acceso a nuestras oportunidades actuales. Trabajamos con inversores calificados que comparten nuestra visión de largo plazo.",
+      "button": "Solicitar acceso"
     }
   }
 }
