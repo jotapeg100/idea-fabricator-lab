@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Code, Cpu, CreditCard, Database, Shield, Zap, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import techHeroImage from "@/assets/tech-hero.jpg";
+import clutchBadge from "@/assets/clutch-badge.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -253,8 +254,12 @@ const TrapialTech = () => {
                     {...cardProps}
                     className={`block bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full ${isAsamblo ? 'cursor-pointer hover:border-primary/50' : ''}`}
                   >
-                    <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                      <span className="text-6xl font-bold text-primary/30">0{index + 1}</span>
+                    <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative">
+                      {isAsamblo ? (
+                        <img src={clutchBadge} alt="Clutch Rating Badge" className="h-28 w-auto" />
+                      ) : (
+                        <span className="text-6xl font-bold text-primary/30">0{index + 1}</span>
+                      )}
                     </div>
                     <div className="p-6">
                       <span className="text-xs font-medium text-primary uppercase tracking-wider">
