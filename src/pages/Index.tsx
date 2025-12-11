@@ -22,10 +22,10 @@ const Index = () => {
           <Logo />
           <nav className="flex items-center gap-6">
             <Link to="/tech" className="text-muted-foreground hover:text-foreground transition-smooth">
-              Trapial Tech
+              Tech
             </Link>
             <Link to="/investments" className="text-muted-foreground hover:text-foreground transition-smooth">
-              Trapial Investments
+              Investments
             </Link>
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-smooth">
               {t('header.aboutUs')}
