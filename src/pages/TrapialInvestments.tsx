@@ -44,9 +44,8 @@ const TrapialInvestments = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <Logo className="h-8 w-8 text-primary" />
-            <span className="font-semibold text-foreground">Trapial Group</span>
+          <Link to="/">
+            <Logo />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
             <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -352,7 +351,7 @@ const TrapialInvestments = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Logo className="h-6 w-6 text-primary" />
+              <Logo variant="footer" />
               <span className="text-sm text-muted-foreground">{t('footerCta.copyright')}</span>
             </div>
             <div className="flex items-center gap-6">
