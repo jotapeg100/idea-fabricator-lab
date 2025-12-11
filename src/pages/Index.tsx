@@ -20,12 +20,18 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Logo />
-          <div className="flex items-center gap-4">
+          <nav className="flex items-center gap-6">
+            <Link to="/tech" className="text-muted-foreground hover:text-foreground transition-smooth">
+              Trapial Tech
+            </Link>
+            <Link to="/investments" className="text-muted-foreground hover:text-foreground transition-smooth">
+              Trapial Investments
+            </Link>
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-smooth">
               {t('header.aboutUs')}
             </Link>
             <LanguageSwitcher />
-          </div>
+          </nav>
         </div>
       </header>
 
