@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Code, Cpu, CreditCard, Database, Shield, Zap, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import techHeroImage from "@/assets/tech-hero.jpg";
-import clutchBadge from "@/assets/clutch-badge.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -142,8 +141,83 @@ const TrapialTech = () => {
         </div>
       </section>
 
-      {/* Team Expertise Section */}
+      {/* Case Studies Section - Moved above Technical Leadership */}
       <section className="py-20 md:py-32 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {t('techPage.caseStudies.title')}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              {t('techPage.caseStudies.subtitle')}
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid md:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {caseStudies.map((study, index) => {
+              const isAsamblo = study.key === 'asamblo';
+              const CardWrapper = isAsamblo ? 'a' : 'div';
+              const cardProps = isAsamblo ? {
+                href: 'https://clutch.co/profile/asamblo',
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              } : {};
+              
+              return (
+                <motion.div key={index} variants={fadeInUp}>
+                  <CardWrapper
+                    {...cardProps}
+                    className={`block bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full ${isAsamblo ? 'cursor-pointer hover:border-primary/50' : ''}`}
+                  >
+                    <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative">
+                      <span className="text-6xl font-bold text-primary/30">0{index + 1}</span>
+                    </div>
+                    <div className="p-6">
+                      <span className="text-xs font-medium text-primary uppercase tracking-wider">
+                        {t(`techPage.caseStudies.${study.key}.category`)}
+                      </span>
+                      <h3 className="text-xl font-semibold mt-2 mb-3 text-foreground">
+                        {t(`techPage.caseStudies.${study.key}.title`)}
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        {t(`techPage.caseStudies.${study.key}.description`)}
+                      </p>
+                      {isAsamblo ? (
+                        <div className="flex items-center gap-2 text-sm text-primary font-medium">
+                          <span>{t(`techPage.caseStudies.${study.key}.cta`)}</span>
+                          <ArrowRight className="h-4 w-4" />
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-4 text-sm">
+                          <span className="text-primary font-medium">
+                            {t(`techPage.caseStudies.${study.key}.result`)}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </CardWrapper>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Expertise Section */}
+      <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -190,85 +264,6 @@ const TrapialTech = () => {
                 </p>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Case Studies Section */}
-      <section className="py-20 md:py-32 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              {t('techPage.caseStudies.title')}
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('techPage.caseStudies.subtitle')}
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            {caseStudies.map((study, index) => {
-              const isAsamblo = study.key === 'asamblo';
-              const CardWrapper = isAsamblo ? 'a' : 'div';
-              const cardProps = isAsamblo ? {
-                href: 'https://clutch.co/profile/asamblo',
-                target: '_blank',
-                rel: 'noopener noreferrer'
-              } : {};
-              
-              return (
-                <motion.div key={index} variants={fadeInUp}>
-                  <CardWrapper
-                    {...cardProps}
-                    className={`block bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full ${isAsamblo ? 'cursor-pointer hover:border-primary/50' : ''}`}
-                  >
-                    <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative">
-                      {isAsamblo ? (
-                        <img src={clutchBadge} alt="Clutch Rating Badge" className="h-28 w-auto" />
-                      ) : (
-                        <span className="text-6xl font-bold text-primary/30">0{index + 1}</span>
-                      )}
-                    </div>
-                    <div className="p-6">
-                      <span className="text-xs font-medium text-primary uppercase tracking-wider">
-                        {t(`techPage.caseStudies.${study.key}.category`)}
-                      </span>
-                      <h3 className="text-xl font-semibold mt-2 mb-3 text-foreground">
-                        {t(`techPage.caseStudies.${study.key}.title`)}
-                      </h3>
-                      <p className="text-muted-foreground mb-4">
-                        {t(`techPage.caseStudies.${study.key}.description`)}
-                      </p>
-                      {isAsamblo ? (
-                        <div className="flex items-center gap-2 text-sm text-primary font-medium">
-                          <span>{t(`techPage.caseStudies.${study.key}.cta`)}</span>
-                          <ArrowRight className="h-4 w-4" />
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-4 text-sm">
-                          <span className="text-primary font-medium">
-                            {t(`techPage.caseStudies.${study.key}.result`)}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </CardWrapper>
-                </motion.div>
-              );
-            })}
           </motion.div>
         </div>
       </section>
