@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Header } from "@/components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Code, Cpu, CreditCard, Database, Shield, Zap, ArrowRight, CheckCircle } from "lucide-react";
@@ -47,31 +47,7 @@ const TrapialTech = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/">
-            <Logo />
-          </Link>
-          <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-              {t('techPage.nav.home')}
-            </Link>
-            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-              {t('header.aboutUs')}
-            </Link>
-            <Link to="/investments" className="text-muted-foreground hover:text-foreground transition-colors">
-              {t('techPage.nav.investments')}
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <LanguageSwitcher />
-            <Button onClick={() => navigate('/form')} size="sm">
-              {t('header.getStarted')}
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header showCTA />
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16">

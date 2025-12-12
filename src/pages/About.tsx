@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Header } from "@/components/Header";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import aboutHeroImage from "@/assets/about-hero.jpg";
@@ -80,20 +80,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Header / Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/">
-            <Logo />
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link to="/" className="text-muted-foreground hover:text-foreground transition-smooth">
-              {t('about.nav.home')}
-            </Link>
-            <LanguageSwitcher />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Intro Section with Hero Background */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
