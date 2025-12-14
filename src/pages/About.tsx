@@ -4,33 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
 import { Header } from "@/components/Header";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import aboutHeroImage from "@/assets/about-hero.jpg";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 }
-};
-
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -40 },
-  visible: { opacity: 1, x: 0 }
-};
-
-const fadeInRight = {
-  hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0 }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15
-    }
-  }
-};
 
 const About = () => {
   const { t } = useTranslation();
@@ -93,45 +67,28 @@ const About = () => {
           }}
         />
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center text-white"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">{t('about.intro.title')}</h1>
             <p className="text-xl md:text-2xl leading-relaxed opacity-90">
               {t('about.intro.description')}
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Our History Section */}
       <section className="py-16 md:py-24 gradient-subtle">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-8 text-foreground"
-              variants={fadeInLeft}
-              transition={{ duration: 0.5 }}
-            >
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
               {t('about.history.title')}
-            </motion.h2>
+            </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <motion.p variants={fadeInUp} transition={{ duration: 0.5 }}>{t('about.history.paragraph1')}</motion.p>
-              <motion.p variants={fadeInUp} transition={{ duration: 0.5 }}>{t('about.history.paragraph2')}</motion.p>
-              <motion.p variants={fadeInUp} transition={{ duration: 0.5 }}>{t('about.history.paragraph3')}</motion.p>
+              <p>{t('about.history.paragraph1')}</p>
+              <p>{t('about.history.paragraph2')}</p>
+              <p>{t('about.history.paragraph3')}</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -139,31 +96,15 @@ const About = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              transition={{ duration: 0.5 }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
               {t('about.team.title')}
-            </motion.h2>
+            </h2>
             
-            <motion.div 
-              className="grid md:grid-cols-3 gap-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
+            <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-                <motion.div 
+                <div 
                   key={index} 
-                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8"
-                  variants={fadeInUp}
-                  transition={{ duration: 0.5 }}
-                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 transition-transform duration-200 hover:-translate-y-2"
                 >
                   <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
                   <p className="text-primary font-medium mb-4">{member.role}</p>
@@ -180,9 +121,9 @@ const About = () => {
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
                   </a>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -191,37 +132,21 @@ const About = () => {
       <section className="py-16 md:py-24 gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              transition={{ duration: 0.5 }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
               {t('about.values.title')}
-            </motion.h2>
+            </h2>
             
-            <motion.div 
-              className="grid md:grid-cols-2 gap-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
+            <div className="grid md:grid-cols-2 gap-8">
               {values.map((value, index) => (
-                <motion.div 
+                <div 
                   key={index} 
-                  className="bg-background rounded-2xl p-8 shadow-soft"
-                  variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
-                  transition={{ duration: 0.5 }}
-                  whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  className="bg-background rounded-2xl p-8 shadow-soft transition-transform duration-200 hover:scale-[1.02]"
                 >
                   <h3 className="text-xl font-bold text-foreground mb-4">{value.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -229,41 +154,22 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-24 md:py-32 gradient-hero text-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-6 text-white"
-              variants={fadeInUp}
-              transition={{ duration: 0.5 }}
-            >
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               {t('about.cta.title')}
-            </motion.h2>
-            <motion.p 
-              className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90"
-              variants={fadeInUp}
-              transition={{ duration: 0.5 }}
-            >
+            </h2>
+            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
               {t('about.cta.description')}
-            </motion.p>
-            <motion.div
-              variants={fadeInUp}
-              transition={{ duration: 0.5 }}
-            >
-              <Link to="/form">
-                <Button 
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 text-lg px-10 py-7 h-auto shadow-medium"
-                >
-                  {t('about.cta.button')} <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </motion.div>
-          </motion.div>
+            </p>
+            <Link to="/form">
+              <Button 
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 text-lg px-10 py-7 h-auto shadow-medium"
+              >
+                {t('about.cta.button')} <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
