@@ -51,7 +51,7 @@ const TrapialTech = () => {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16">
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 grid-overlay"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${techHeroImage})`,
             backgroundSize: "cover",
