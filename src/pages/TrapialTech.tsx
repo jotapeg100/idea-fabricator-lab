@@ -55,7 +55,7 @@ const TrapialTech = () => {
             <p className="text-xl md:text-2xl leading-relaxed opacity-90 mb-8">
               {t('techPage.hero.subtitle')}
             </p>
-            <Button size="lg" onClick={() => navigate('/form')} className="text-lg px-8">
+            <Button size="lg" onClick={() => navigate('/form_tech')} className="text-lg px-8">
               {t('techPage.hero.cta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -220,7 +220,7 @@ const TrapialTech = () => {
             <Button 
               size="lg" 
               variant="secondary"
-              onClick={() => navigate('/form')} 
+              onClick={() => navigate('/form_tech')} 
               className="text-lg px-8"
             >
               {t('techPage.cta.button')}
