@@ -3,11 +3,12 @@ import { ArrowRight, Code, TrendingUp, CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
 import { Header } from "@/components/Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-patagonia.jpg";
 
 const Index = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -39,7 +40,7 @@ const Index = () => {
             size="lg"
             className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto animate-fade-in shadow-medium"
             style={{ animationDelay: "0.4s" }}
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("services")}
           >
             {t('hero.cta')} <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -226,7 +227,7 @@ const Index = () => {
             <Button 
               size="lg"
               className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-8 h-auto shadow-medium"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => navigate('/form_tech')}
             >
               {t('footerCta.cta')} <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
