@@ -86,6 +86,13 @@
     "badge3": "Sin compromiso requerido",
     "loading": "Cargando…"
   },
+  "formTech": {
+    "title": "Iniciá tu Proyecto Tech",
+    "subtitle": "Contanos sobre tu proyecto y te contactamos",
+    "badge1": "Consulta gratuita",
+    "badge2": "Equipo senior",
+    "badge3": "Respuesta rápida"
+  },
   "about": {
     "nav": {
       "home": "Inicio"
