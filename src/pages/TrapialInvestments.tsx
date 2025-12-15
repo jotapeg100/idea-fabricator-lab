@@ -3,23 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
 import { Header } from "@/components/Header";
 import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import { Building, Leaf, FileText, TrendingUp, MapPin, Shield, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import investmentsHeroImage from "@/assets/investments-hero.jpg";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
-};
 
 const TrapialInvestments = () => {
   const { t } = useTranslation();
@@ -59,13 +45,7 @@ const TrapialInvestments = () => {
           }}
         />
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center text-white"
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium mb-6 border border-primary/30">
               {t('investmentsPage.hero.badge')}
             </span>
@@ -79,21 +59,14 @@ const TrapialInvestments = () => {
               {t('investmentsPage.hero.cta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Investment Thesis Section */}
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
                 {t('investmentsPage.thesis.title')}
@@ -117,43 +90,29 @@ const TrapialInvestments = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t('investmentsPage.services.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('investmentsPage.services.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <motion.div 
+                <div 
                   key={index}
                   className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30"
-                  variants={fadeInUp}
                 >
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                     <Icon className="h-7 w-7 text-primary" />
@@ -172,39 +131,26 @@ const TrapialInvestments = () => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Team Expertise Section */}
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t('investmentsPage.expertise.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('investmentsPage.expertise.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="max-w-3xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-          >
+          <div className="max-w-3xl mx-auto">
             <div className="bg-card border border-border rounded-2xl p-8">
               <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
                 <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
@@ -233,41 +179,27 @@ const TrapialInvestments = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Featured Opportunities Section */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t('investmentsPage.opportunities.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('investmentsPage.opportunities.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
+          <div className="grid md:grid-cols-3 gap-8">
             {opportunities.map((opp, index) => (
-              <motion.div 
+              <div 
                 key={index}
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
-                variants={fadeInUp}
               >
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                   <MapPin className="h-16 w-16 text-primary/40" />
@@ -291,23 +223,16 @@ const TrapialInvestments = () => {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-3xl mx-auto text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t('investmentsPage.cta.title')}
             </h2>
@@ -323,7 +248,7 @@ const TrapialInvestments = () => {
               {t('investmentsPage.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
