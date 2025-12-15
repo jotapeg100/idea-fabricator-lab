@@ -59,7 +59,7 @@ const About = () => {
       {/* Intro Section with Hero Background */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 grid-overlay"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${aboutHeroImage})`,
             backgroundSize: "cover",
