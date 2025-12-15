@@ -3,23 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
 import { Header } from "@/components/Header";
 import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import { Code, Cpu, CreditCard, Database, Shield, Zap, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import techHeroImage from "@/assets/tech-hero.jpg";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
-};
 
 const TrapialTech = () => {
   const { t } = useTranslation();
@@ -59,13 +45,7 @@ const TrapialTech = () => {
           }}
         />
         <div className="relative z-10 container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center text-white"
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium mb-6 border border-primary/30">
               {t('techPage.hero.badge')}
             </span>
@@ -79,43 +59,29 @@ const TrapialTech = () => {
               {t('techPage.hero.cta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t('techPage.services.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('techPage.services.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <motion.div 
+                <div 
                   key={index}
                   className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-primary/30"
-                  variants={fadeInUp}
                 >
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                     <Icon className="h-7 w-7 text-primary" />
@@ -134,39 +100,26 @@ const TrapialTech = () => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Case Studies Section - Moved above Technical Leadership */}
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t('techPage.caseStudies.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('techPage.caseStudies.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
+          <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => {
               const isAsamblo = study.key === 'asamblo';
               const CardWrapper = isAsamblo ? 'a' : 'div';
@@ -177,7 +130,7 @@ const TrapialTech = () => {
               } : {};
               
               return (
-                <motion.div key={index} variants={fadeInUp}>
+                <div key={index}>
                   <CardWrapper
                     {...cardProps}
                     className={`block bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full ${isAsamblo ? 'cursor-pointer hover:border-primary/50' : ''}`}
@@ -209,44 +162,30 @@ const TrapialTech = () => {
                       )}
                     </div>
                   </CardWrapper>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Team Expertise Section */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t('techPage.expertise.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('techPage.expertise.subtitle')}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {['luciano', 'nicolas', 'juanpablo'].map((member) => (
-              <motion.div 
+              <div 
                 key={member}
                 className="bg-card border border-border rounded-2xl p-6 text-center"
-                variants={fadeInUp}
               >
                 <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">
@@ -262,23 +201,16 @@ const TrapialTech = () => {
                 <p className="text-sm text-muted-foreground">
                   {t(`techPage.expertise.${member}.focus`)}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-3xl mx-auto text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            variants={fadeInUp}
-          >
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t('techPage.cta.title')}
             </h2>
@@ -294,7 +226,7 @@ const TrapialTech = () => {
               {t('techPage.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
