@@ -9,6 +9,10 @@ import investmentsHeroImage from "@/assets/investments-hero.jpg";
 import vertientePremiumImage from "@/assets/vertiente-premium.jpg";
 import mendozaVineyardImage from "@/assets/mendoza-vineyard-opp.jpg";
 import cattlePatagoniaImage from "@/assets/cattle-patagonia.jpg";
+import carbonCreditsImage from "@/assets/carbon-credits-forest.jpg";
+import fishFarmingImage from "@/assets/fish-farming.jpg";
+import strawberryFarmingImage from "@/assets/strawberry-farming.jpg";
+import frigorificoImage from "@/assets/frigorifico.jpg";
 
 const TrapialInvestments = () => {
   const { t } = useTranslation();
@@ -30,7 +34,11 @@ const TrapialInvestments = () => {
   const opportunities = [
     { key: "patagonia", image: vertientePremiumImage },
     { key: "vineyard", image: mendozaVineyardImage },
-    { key: "agricultural", image: cattlePatagoniaImage }
+    { key: "agricultural", image: cattlePatagoniaImage },
+    { key: "carbonCredits", image: carbonCreditsImage },
+    { key: "fishFarming", image: fishFarmingImage },
+    { key: "strawberries", image: strawberryFarmingImage },
+    { key: "coldStorage", image: frigorificoImage }
   ];
 
   return (
