@@ -359,6 +359,34 @@
         "description": "Operación ganadera sustentable a gran escala en pasturas premium con posicionamiento orgánico certificado y listo para exportación.",
         "location": "Patagonia",
         "status": "Pre-Lanzamiento"
+      },
+      "carbonCredits": {
+        "category": "Sustentabilidad",
+        "title": "Bonos de Carbono",
+        "description": "Proyecto de forestación en 5.000 hectáreas para generación de créditos de carbono certificados Gold Standard. Riego natural y costos operativos significativamente menores al benchmark de la industria.",
+        "location": "Patagonia Norte, Argentina",
+        "status": "En Estructuración"
+      },
+      "fishFarming": {
+        "category": "Acuicultura",
+        "title": "Piscicultura de Trucha",
+        "description": "Producción de trucha arco iris con agua de vertientes naturales patagónicas. Sistema de recirculación cerrado con costos operativos optimizados y acceso a mercados de exportación premium.",
+        "location": "Patagonia Norte, Argentina",
+        "status": "En Estructuración"
+      },
+      "strawberries": {
+        "category": "Agricultura Social",
+        "title": "Siembra de Frutillas",
+        "description": "Proyecto piloto de cultivo de frutillas con impacto social positivo. Generación de empleo especializado y desarrollo de capacidades locales en la región patagónica.",
+        "location": "Patagonia Norte, Argentina",
+        "status": "Proyecto Piloto"
+      },
+      "coldStorage": {
+        "category": "Industrial",
+        "title": "Frigorífico en Operación",
+        "description": "Planta frigorífica operativa con capacidad de procesamiento y almacenamiento en frío. Activo generador de ingresos con infraestructura establecida y cartera de clientes existente.",
+        "location": "Patagonia, Argentina",
+        "status": "En Operación"
       }
     },
     "cta": {

@@ -356,9 +356,37 @@
       "agricultural": {
         "category": "Agriculture",
         "title": "Sustainable Grazing Operation",
-        "description": "Large-scale sustainable cattle operation on premium grasslands with certified organic and export-ready positioning.",
+        "description": "Large-scale sustainable cattle operation on premium pastures with certified organic positioning and export-ready status.",
         "location": "Patagonia",
         "status": "Pre-Launch"
+      },
+      "carbonCredits": {
+        "category": "Sustainability",
+        "title": "Carbon Credits",
+        "description": "Reforestation project across 5,000 hectares for Gold Standard certified carbon credits. Natural irrigation and significantly lower operating costs compared to industry benchmarks.",
+        "location": "Northern Patagonia, Argentina",
+        "status": "Structuring"
+      },
+      "fishFarming": {
+        "category": "Aquaculture",
+        "title": "Trout Fish Farming",
+        "description": "Rainbow trout production using natural Patagonian spring water. Closed recirculation system with optimized operating costs and access to premium export markets.",
+        "location": "Northern Patagonia, Argentina",
+        "status": "Structuring"
+      },
+      "strawberries": {
+        "category": "Social Agriculture",
+        "title": "Strawberry Farming",
+        "description": "Pilot strawberry cultivation project with positive social impact. Specialized job creation and local capacity building in the Patagonian region.",
+        "location": "Northern Patagonia, Argentina",
+        "status": "Pilot Project"
+      },
+      "coldStorage": {
+        "category": "Industrial",
+        "title": "Operating Cold Storage",
+        "description": "Operational cold storage plant with processing and refrigeration capacity. Income-generating asset with established infrastructure and existing client portfolio.",
+        "location": "Patagonia, Argentina",
+        "status": "In Operation"
       }
     },
     "cta": {
