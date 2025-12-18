@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Building, Leaf, FileText, TrendingUp, MapPin, Shield, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import investmentsHeroImage from "@/assets/investments-hero.jpg";
+import vertientePremiumImage from "@/assets/vertiente-premium.jpg";
 
 const TrapialInvestments = () => {
   const { t } = useTranslation();
@@ -25,9 +26,9 @@ const TrapialInvestments = () => {
   ];
 
   const opportunities = [
-    { key: "patagonia" },
-    { key: "vineyard" },
-    { key: "agricultural" }
+    { key: "patagonia", image: vertientePremiumImage },
+    { key: "vineyard", image: null },
+    { key: "agricultural", image: null }
   ];
 
   return (
@@ -201,9 +202,19 @@ const TrapialInvestments = () => {
                 key={index}
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
               >
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <MapPin className="h-16 w-16 text-primary/40" />
-                </div>
+                {opp.image ? (
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={opp.image} 
+                      alt={t(`investmentsPage.opportunities.${opp.key}.title`)}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ) : (
+                  <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                    <MapPin className="h-16 w-16 text-primary/40" />
+                  </div>
+                )}
                 <div className="p-6">
                   <span className="text-xs font-medium text-primary uppercase tracking-wider">
                     {t(`investmentsPage.opportunities.${opp.key}.category`)}
