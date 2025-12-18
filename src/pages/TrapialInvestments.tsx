@@ -213,12 +213,13 @@ const TrapialInvestments = () => {
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
               >
                 {opp.image ? (
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden relative">
                     <img 
                       src={opp.image} 
                       alt={t(`investmentsPage.opportunities.${opp.key}.title`)}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent grid-overlay pointer-events-none" />
                   </div>
                 ) : (
                   <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
