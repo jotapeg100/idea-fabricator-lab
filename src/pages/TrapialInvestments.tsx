@@ -7,6 +7,8 @@ import { Building, Leaf, FileText, TrendingUp, MapPin, Shield, ArrowRight, Check
 import { Button } from "@/components/ui/button";
 import investmentsHeroImage from "@/assets/investments-hero.jpg";
 import vertientePremiumImage from "@/assets/vertiente-premium.jpg";
+import mendozaVineyardImage from "@/assets/mendoza-vineyard-opp.jpg";
+import cattlePatagoniaImage from "@/assets/cattle-patagonia.jpg";
 
 const TrapialInvestments = () => {
   const { t } = useTranslation();
@@ -27,8 +29,8 @@ const TrapialInvestments = () => {
 
   const opportunities = [
     { key: "patagonia", image: vertientePremiumImage },
-    { key: "vineyard", image: null },
-    { key: "agricultural", image: null }
+    { key: "vineyard", image: mendozaVineyardImage },
+    { key: "agricultural", image: cattlePatagoniaImage }
   ];
 
   return (
