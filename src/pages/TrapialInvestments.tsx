@@ -74,6 +74,63 @@ const TrapialInvestments = () => {
         </div>
       </section>
 
+      {/* Featured Opportunities Section */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
+              {t('investmentsPage.opportunities.title')}
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
+              {t('investmentsPage.opportunities.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            {opportunities.map((opp, index) => (
+              <div 
+                key={index}
+                className="bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
+              >
+                {opp.image ? (
+                  <div className="h-40 sm:h-48 overflow-hidden relative">
+                    <img 
+                      src={opp.image} 
+                      alt={t(`investmentsPage.opportunities.${opp.key}.title`)}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent grid-overlay pointer-events-none" />
+                  </div>
+                ) : (
+                  <div className="h-40 sm:h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                    <MapPin className="h-12 w-12 sm:h-16 sm:w-16 text-primary/40" />
+                  </div>
+                )}
+                <div className="p-4 sm:p-5 md:p-6">
+                  <span className="text-[10px] sm:text-xs font-medium text-primary uppercase tracking-wider">
+                    {t(`investmentsPage.opportunities.${opp.key}.category`)}
+                  </span>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mt-1.5 sm:mt-2 mb-2 sm:mb-3 text-foreground">
+                    {t(`investmentsPage.opportunities.${opp.key}.title`)}
+                  </h3>
+                  <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-3 sm:mb-4 line-clamp-3">
+                    {t(`investmentsPage.opportunities.${opp.key}.description`)}
+                  </p>
+                  <div className="flex items-center justify-between text-xs sm:text-sm">
+                    <span className="text-muted-foreground">
+                      {t(`investmentsPage.opportunities.${opp.key}.location`)}
+                    </span>
+                    <span className="text-primary font-medium">
+                      {t(`investmentsPage.opportunities.${opp.key}.status`)}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Investment Thesis Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6">
@@ -190,63 +247,6 @@ const TrapialInvestments = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Opportunities Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-              {t('investmentsPage.opportunities.title')}
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-              {t('investmentsPage.opportunities.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {opportunities.map((opp, index) => (
-              <div 
-                key={index}
-                className="bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
-              >
-                {opp.image ? (
-                  <div className="h-40 sm:h-48 overflow-hidden relative">
-                    <img 
-                      src={opp.image} 
-                      alt={t(`investmentsPage.opportunities.${opp.key}.title`)}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent grid-overlay pointer-events-none" />
-                  </div>
-                ) : (
-                  <div className="h-40 sm:h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                    <MapPin className="h-12 w-12 sm:h-16 sm:w-16 text-primary/40" />
-                  </div>
-                )}
-                <div className="p-4 sm:p-5 md:p-6">
-                  <span className="text-[10px] sm:text-xs font-medium text-primary uppercase tracking-wider">
-                    {t(`investmentsPage.opportunities.${opp.key}.category`)}
-                  </span>
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold mt-1.5 sm:mt-2 mb-2 sm:mb-3 text-foreground">
-                    {t(`investmentsPage.opportunities.${opp.key}.title`)}
-                  </h3>
-                  <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-3 sm:mb-4 line-clamp-3">
-                    {t(`investmentsPage.opportunities.${opp.key}.description`)}
-                  </p>
-                  <div className="flex items-center justify-between text-xs sm:text-sm">
-                    <span className="text-muted-foreground">
-                      {t(`investmentsPage.opportunities.${opp.key}.location`)}
-                    </span>
-                    <span className="text-primary font-medium">
-                      {t(`investmentsPage.opportunities.${opp.key}.status`)}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
