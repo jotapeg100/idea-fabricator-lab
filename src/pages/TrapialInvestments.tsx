@@ -66,10 +66,20 @@ const TrapialInvestments = () => {
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90 mb-6 sm:mb-8 px-2">
               {t('investmentsPage.hero.subtitle')}
             </p>
-            <Button size="lg" onClick={() => scrollToSection('opportunities')} className="text-sm sm:text-base lg:text-lg px-6 sm:px-8">
-              {t('investmentsPage.hero.cta')}
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" onClick={() => scrollToSection('opportunities')} className="text-sm sm:text-base lg:text-lg px-6 sm:px-8">
+                {t('investmentsPage.hero.cta')}
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                onClick={() => navigate('/form')} 
+                className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 bg-white/10 border-white/30 text-white hover:bg-white/20"
+              >
+                {t('investmentsPage.cta.button')}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
