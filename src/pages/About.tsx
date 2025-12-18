@@ -57,7 +57,7 @@ const About = () => {
       <Header />
 
       {/* Intro Section with Hero Background */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
         <div
           className="absolute inset-0 z-0 grid-overlay"
           style={{
@@ -66,10 +66,10 @@ const About = () => {
             backgroundPosition: "center",
           }}
         />
-        <div className="relative z-10 container mx-auto px-4">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">{t('about.intro.title')}</h1>
-            <p className="text-xl md:text-2xl leading-relaxed opacity-90">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 px-2">{t('about.intro.title')}</h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90 px-2">
               {t('about.intro.description')}
             </p>
           </div>
@@ -77,13 +77,13 @@ const About = () => {
       </section>
 
       {/* Our History Section */}
-      <section className="py-16 md:py-24 gradient-subtle">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 gradient-subtle">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 text-foreground">
               {t('about.history.title')}
             </h2>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>{t('about.history.paragraph1')}</p>
               <p>{t('about.history.paragraph2')}</p>
               <p>{t('about.history.paragraph3')}</p>
@@ -93,30 +93,30 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-center text-foreground">
               {t('about.team.title')}
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {team.map((member, index) => (
                 <div 
                   key={index} 
-                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 transition-transform duration-200 hover:-translate-y-2"
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 transition-transform duration-200 hover:-translate-y-2"
                 >
-                  <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
-                  <p className="text-primary font-medium mb-4">{member.role}</p>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{member.description}</p>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">{member.name}</h3>
+                  <p className="text-sm sm:text-base text-primary font-medium mb-3 sm:mb-4">{member.role}</p>
+                  <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">{member.description}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
                     <span className="font-semibold text-foreground">{t('about.team.specialtiesLabel')}</span> {member.specialties}
                   </p>
                   <a 
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-smooth"
+                    className="inline-flex items-center gap-2 text-sm sm:text-base text-primary hover:text-primary/80 transition-smooth"
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
@@ -129,21 +129,21 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 gradient-subtle">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 gradient-subtle">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-center text-foreground">
               {t('about.values.title')}
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               {values.map((value, index) => (
                 <div 
                   key={index} 
-                  className="bg-background rounded-2xl p-8 shadow-soft transition-transform duration-200 hover:scale-[1.02]"
+                  className="bg-background rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-soft transition-transform duration-200 hover:scale-[1.02]"
                 >
-                  <h3 className="text-xl font-bold text-foreground mb-4">{value.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">{value.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{value.description}</p>
                 </div>
               ))}
             </div>
@@ -152,21 +152,21 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 gradient-hero text-white overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 gradient-hero text-white overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
               {t('about.cta.title')}
             </h2>
-            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed opacity-90 px-2">
               {t('about.cta.description')}
             </p>
             <Link to="/form">
               <Button 
                 size="lg"
-                className="bg-white text-primary hover:bg-white/90 text-lg px-10 py-7 h-auto shadow-medium"
+                className="bg-white text-primary hover:bg-white/90 text-sm sm:text-base lg:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-7 h-auto shadow-medium"
               >
-                {t('about.cta.button')} <ArrowRight className="ml-2 h-5 w-5" />
+                {t('about.cta.button')} <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </Link>
           </div>
@@ -174,11 +174,11 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+      <footer className="py-6 sm:py-8 bg-primary text-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <Logo variant="footer" className="[&_span]:text-white [&_svg]:text-white" />
-            <p className="text-sm opacity-75">
+            <p className="text-xs sm:text-sm opacity-75 text-center">
               {t('footerCta.copyright')}
             </p>
           </div>
