@@ -382,9 +382,9 @@
         "status": "Proyecto Piloto"
       },
       "coldStorage": {
-        "category": "Industrial",
+        "category": "Agroindustria",
         "title": "Frigorífico en Operación",
-        "description": "Planta frigorífica operativa con capacidad de procesamiento y almacenamiento en frío. Activo generador de ingresos con infraestructura establecida y cartera de clientes existente.",
+        "description": "Planta de faena y procesamiento de carne vacuna con habilitación para exportación. Operación establecida con capacidad de procesamiento, cortes enfriados y congelados listos para mercados internacionales.",
         "location": "Patagonia, Argentina",
         "status": "En Operación"
       }
