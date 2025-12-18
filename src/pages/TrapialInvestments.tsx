@@ -75,9 +75,9 @@ const TrapialInvestments = () => {
       </section>
 
       {/* Featured Opportunities Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-background">
+      <section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
               {t('investmentsPage.opportunities.title')}
             </h2>
@@ -132,10 +132,10 @@ const TrapialInvestments = () => {
       </section>
 
       {/* Investment Thesis Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30">
+      <section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8 sm:mb-12">
+            <div className="text-center mb-6 sm:mb-8">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
                 {t('investmentsPage.thesis.title')}
               </h2>
@@ -163,9 +163,9 @@ const TrapialInvestments = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-background">
+      <section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
               {t('investmentsPage.services.title')}
             </h2>
@@ -207,9 +207,9 @@ const TrapialInvestments = () => {
       </section>
 
       {/* Team Expertise Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30">
+      <section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
               {t('investmentsPage.expertise.title')}
             </h2>
@@ -252,7 +252,7 @@ const TrapialInvestments = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-primary text-primary-foreground">
+      <section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
