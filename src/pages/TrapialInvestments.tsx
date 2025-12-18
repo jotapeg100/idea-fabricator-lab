@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/Logo";
 import { Header } from "@/components/Header";
@@ -18,9 +17,10 @@ const TrapialInvestments = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const services = [
     { icon: Building, key: "realEstate" },
@@ -66,7 +66,7 @@ const TrapialInvestments = () => {
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90 mb-6 sm:mb-8 px-2">
               {t('investmentsPage.hero.subtitle')}
             </p>
-            <Button size="lg" onClick={() => navigate('/form')} className="text-sm sm:text-base lg:text-lg px-6 sm:px-8">
+            <Button size="lg" onClick={() => scrollToSection('opportunities')} className="text-sm sm:text-base lg:text-lg px-6 sm:px-8">
               {t('investmentsPage.hero.cta')}
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
@@ -75,7 +75,7 @@ const TrapialInvestments = () => {
       </section>
 
       {/* Featured Opportunities Section */}
-      <section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-background">
+      <section id="opportunities" className="py-10 sm:py-12 md:py-14 lg:py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
