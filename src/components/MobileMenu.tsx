@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -11,12 +11,10 @@ interface MobileMenuProps {
 
 export const MobileMenu = ({ showCTA = false }: MobileMenuProps) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
-  const handleNavigate = (path: string) => {
+  const handleClose = () => {
     setOpen(false);
-    navigate(path);
   };
 
   return (
@@ -34,40 +32,43 @@ export const MobileMenu = ({ showCTA = false }: MobileMenuProps) => {
           </div>
           
           <nav className="flex flex-col p-4 gap-1">
-            <button
-              onClick={() => handleNavigate('/')}
+            <Link
+              to="/"
+              onClick={handleClose}
               className="flex items-center px-4 py-3 text-left text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               {t('header.home')}
-            </button>
-            <button
-              onClick={() => handleNavigate('/tech')}
+            </Link>
+            <Link
+              to="/tech"
+              onClick={handleClose}
               className="flex items-center px-4 py-3 text-left text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               Tech
-            </button>
-            <button
-              onClick={() => handleNavigate('/investments')}
+            </Link>
+            <Link
+              to="/investments"
+              onClick={handleClose}
               className="flex items-center px-4 py-3 text-left text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               Investments
-            </button>
-            <button
-              onClick={() => handleNavigate('/about')}
+            </Link>
+            <Link
+              to="/about"
+              onClick={handleClose}
               className="flex items-center px-4 py-3 text-left text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               {t('header.aboutUs')}
-            </button>
+            </Link>
           </nav>
 
           {showCTA && (
             <div className="mt-auto p-4 border-t border-border">
-              <Button 
-                onClick={() => handleNavigate('/form')} 
-                className="w-full"
-              >
-                {t('header.getStarted')}
-              </Button>
+              <Link to="/form" onClick={handleClose} className="block">
+                <Button className="w-full">
+                  {t('header.getStarted')}
+                </Button>
+              </Link>
             </div>
           )}
         </div>
