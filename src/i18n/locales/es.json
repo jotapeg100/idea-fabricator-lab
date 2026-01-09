@@ -124,6 +124,16 @@
         "role": "Founder - Managing Director",
         "description": "Ejecutivo con +15 años en tecnología, fintech y desarrollo de negocios en América Latina y US. Un defensor de la transformación digital, apasionado por impulsar la transparencia empresarial y proyectos de impacto en la región.",
         "specialties": "Business development, program management, estrategia comercial, pagos digitales, mercados LATAM."
+      },
+      "raul": {
+        "role": "Founder - RR.II.",
+        "description": "Ejecutivo con más de 20 años de trayectoria en relaciones institucionales en ámbito público y privado.",
+        "specialties": "Relaciones institucionales, gestión pública, vinculación público-privada."
+      },
+      "emmanuel": {
+        "role": "Real Estate Manager",
+        "description": "Profesional matriculado con más de 10 años de trayectoria en la región patagónica. En constante búsqueda de oportunidades para aplicar la innovación como factor transformador de las propuestas.",
+        "specialties": "Gestión inmobiliaria, desarrollo de proyectos, innovación en real estate."
       }
     },
     "values": {

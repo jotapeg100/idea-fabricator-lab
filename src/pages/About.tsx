@@ -30,6 +30,20 @@ const About = () => {
       description: t('about.team.juanpablo.description'),
       specialties: t('about.team.juanpablo.specialties'),
       linkedin: "https://linkedin.com/in/jpgonzalez68"
+    },
+    {
+      name: "Raúl O. Lela",
+      role: t('about.team.raul.role'),
+      description: t('about.team.raul.description'),
+      specialties: t('about.team.raul.specialties'),
+      linkedin: ""
+    },
+    {
+      name: "Emmanuel Natarelli",
+      role: t('about.team.emmanuel.role'),
+      description: t('about.team.emmanuel.description'),
+      specialties: t('about.team.emmanuel.specialties'),
+      linkedin: ""
     }
   ];
 
