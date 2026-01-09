@@ -11,27 +11,6 @@ const About = () => {
 
   const team = [
     {
-      name: "Luciano Mazzola",
-      role: t('about.team.luciano.role'),
-      description: t('about.team.luciano.description'),
-      specialties: t('about.team.luciano.specialties'),
-      linkedin: "https://linkedin.com/in/lucianomazzola"
-    },
-    {
-      name: "Nicolás Sosa",
-      role: t('about.team.nicolas.role'),
-      description: t('about.team.nicolas.description'),
-      specialties: t('about.team.nicolas.specialties'),
-      linkedin: "https://linkedin.com/in/nicolassosa"
-    },
-    {
-      name: "Juan Pablo González",
-      role: t('about.team.juanpablo.role'),
-      description: t('about.team.juanpablo.description'),
-      specialties: t('about.team.juanpablo.specialties'),
-      linkedin: "https://linkedin.com/in/jpgonzalez68"
-    },
-    {
       name: "Raúl O. Lela",
       role: t('about.team.raul.role'),
       description: t('about.team.raul.description'),
@@ -44,6 +23,27 @@ const About = () => {
       description: t('about.team.emmanuel.description'),
       specialties: t('about.team.emmanuel.specialties'),
       linkedin: ""
+    },
+    {
+      name: "Juan Pablo González",
+      role: t('about.team.juanpablo.role'),
+      description: t('about.team.juanpablo.description'),
+      specialties: t('about.team.juanpablo.specialties'),
+      linkedin: "https://linkedin.com/in/jpgonzalez68"
+    },
+    {
+      name: "Luciano Mazzola",
+      role: t('about.team.luciano.role'),
+      description: t('about.team.luciano.description'),
+      specialties: t('about.team.luciano.specialties'),
+      linkedin: "https://linkedin.com/in/lucianomazzola"
+    },
+    {
+      name: "Nicolás Sosa",
+      role: t('about.team.nicolas.role'),
+      description: t('about.team.nicolas.description'),
+      specialties: t('about.team.nicolas.specialties'),
+      linkedin: "https://linkedin.com/in/nicolassosa"
     }
   ];
 
