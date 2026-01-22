@@ -6,8 +6,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import flagUK from "@/assets/flag-uk.png";
-import flagSpain from "@/assets/flag-spain.png";
 
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -16,42 +14,28 @@ export const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
-  // Show the opposite language (the one to switch to)
-  const displayFlag = i18n.language === 'es' ? flagUK : flagSpain;
+  // Show the current language code
+  const currentLang = i18n.language === 'es' ? 'ES' : 'EN';
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="p-2">
-          <img 
-            src={displayFlag} 
-            alt="Language flag" 
-            className="w-6 h-6 rounded object-cover"
-          />
+        <Button variant="ghost" size="sm" className="px-3 py-2 font-medium text-sm">
+          {currentLang}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-background z-50">
+      <DropdownMenuContent align="end" className="bg-background z-50 min-w-[80px]">
         <DropdownMenuItem 
           onClick={() => changeLanguage('en')}
-          className="cursor-pointer gap-2"
+          className="cursor-pointer justify-center font-medium"
         >
-          <img 
-            src={flagUK} 
-            alt="UK flag" 
-            className="w-5 h-5 rounded object-cover"
-          />
-          <span>English</span>
+          EN
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => changeLanguage('es')}
-          className="cursor-pointer gap-2"
+          className="cursor-pointer justify-center font-medium"
         >
-          <img 
-            src={flagSpain} 
-            alt="Spain flag" 
-            className="w-5 h-5 rounded object-cover"
-          />
-          <span>Español</span>
+          ES
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
